@@ -1,5 +1,5 @@
-<html> 
-<%= simple_form_for @incidents do |f| %>
+
+<%= simple_form_for @incident do |f| %>
   <%= f.input :fund, as: :select, collection: funds, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
   <%= f.input :dose, hint: 'What was the precise dosage?' %>
   <%= f.input :date_of_incident, hint: 'No special characters.' %>
