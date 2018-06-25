@@ -1,0 +1,49 @@
+.container-logsign {
+text-align: center;
+
+vertical-align: middle;
+background-color: rgba(255, 249, 192, 0.25);
+margin: 0 auto;
+//opacity: 0.8;
+width: 550px;
+//height: 500px;
+//border-radius: 4px;
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color:  #173F5E;
+//border: solid 0.1px;
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: white;
+}
+}
+
+.card-info {
+  display: center;
+  padding: 20px;
+  background-color: grey;
+  width: 500px;
+  vertical-align: 0 auto;
+  border-radius: 4px;
+}
+
+#btn {
+  margin-top: 30px;
+  width: 100px;
+  background-color: green;
+}
+
+.card-links {
+  margin-top: 50px;
+  //background-color: grey;
+  color: white;
+
+}
+
+#password-request {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
