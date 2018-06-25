@@ -8,12 +8,13 @@ class IncidentsController < ApplicationController
   def new
     @incident = Incidentncident.new
     @parent = current_user.parent
+    @medications = current_user.parent.child.childmedication.all
   end
 
   def create
     @incident = Incident.new(incident_params)
     @incident.parent = Parent.find(current_user.parent.id)
-      if @incident.save
+    if @incident.save
       redirect_to incident_path(@incident)
     else
       render 'new'
@@ -32,7 +33,6 @@ class IncidentsController < ApplicationController
   end
 
   def destroy
-    @incident = Incident.find(params[:id])
     @incident.destroy
     redirect_to incidents_path
   end
