@@ -48,8 +48,18 @@ ActiveRecord::Schema.define(version: 2018_06_25_115135) do
   end
 
   create_table "incidents", force: :cascade do |t|
+    t.string "medication_name"
+    t.string "dose"
+    t.string "period"
+    t.string "side_effect"
+    t.text "description"
+    t.integer "metric"
+    t.date "date_medication_received"
+    t.date "date_of_incident"
+    t.bigint "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_incidents_on_parent_id"
   end
 
   create_table "medications", force: :cascade do |t|
@@ -94,5 +104,6 @@ ActiveRecord::Schema.define(version: 2018_06_25_115135) do
   add_foreign_key "child_medications", "children"
   add_foreign_key "child_medications", "medications"
   add_foreign_key "children", "parents"
+  add_foreign_key "incidents", "parents"
   add_foreign_key "parents", "users"
 end
