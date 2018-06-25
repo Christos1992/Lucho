@@ -10,10 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_104632) do
+ActiveRecord::Schema.define(version: 2018_06_25_115135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "child_medications", force: :cascade do |t|
+    t.string "perscriptioned_doses"
+    t.boolean "active"
+    t.integer "days_for_useage"
+    t.bigint "medication_id"
+    t.bigint "child_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["child_id"], name: "index_child_medications_on_child_id"
+    t.index ["medication_id"], name: "index_child_medications_on_medication_id"
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.date "date_of_birth"
+    t.string "type_of_cancer"
+    t.integer "stage_of_cancer"
+    t.boolean "first_time_patient"
+    t.date "date_treatment_begin"
+    t.string "hospital_name"
+    t.string "doctor_name"
+    t.boolean "school"
+    t.text "biggest_dream"
+    t.text "medications"
+    t.bigint "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_children_on_parent_id"
+  end
+
+  create_table "incidents", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "medications", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parents", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.date "date_of_birth"
+    t.string "working_status"
+    t.string "civil_status"
+    t.text "hobbies"
+    t.boolean "share_info"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_parents_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +91,8 @@ ActiveRecord::Schema.define(version: 2018_06_25_104632) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "child_medications", "children"
+  add_foreign_key "child_medications", "medications"
+  add_foreign_key "children", "parents"
+  add_foreign_key "parents", "users"
 end
