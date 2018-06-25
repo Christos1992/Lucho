@@ -5,7 +5,6 @@ class CreateChildMedications < ActiveRecord::Migration[5.2]
       t.boolean :active
       t.integer :days_for_useage
 
-
       t.references :medication, foreign_key: true
       t.references :child, foreign_key: true
 
