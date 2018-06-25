@@ -8,13 +8,15 @@ def intex
   def new
     @childmedication = ChildMedication.new
     @child = current_user.parent.child
+    @medications =Medication.all
 
   end
 
   def create
     @childmedication = ChildMedication.new(childmedication_params)
     @childmedication.parent = Parent.find(current_user.parent.id)
-      if @childmedication.save
+    @childmedication.medication = Medication.find(params[:medication])
+    if @childmedication.save
       redirect_to childmedication_path(@childmedication)
     else
       render 'new'
