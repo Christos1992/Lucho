@@ -6,9 +6,10 @@ class IncidentsController < ApplicationController
   end
 
   def new
-    @incident = Incidentncident.new
+    @incident = Incident.new
     @parent = current_user.parent
-    @medications = current_user.parent.child.childmedication.all
+    @allmedications = current_user.parent.child.child_medications
+
   end
 
   def create

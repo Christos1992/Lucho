@@ -1,1 +1,5 @@
 <h1>new</h1>
+<% @allmedications.each do |medication| %>
+<%= medication.medication.name %>
+<!-- first medication is class of Child_Medication, second one is a class of Medicaiton (which is a list with all medications and their name/descriptio) -->
+<% end %>

@@ -1,10 +1,10 @@
 class ParentsController < ApplicationController
-before_action  :find_id, [:show, :edit, :update, :destroy]
+before_action  :find_id, only:[:show, :edit, :update, :destroy]
   def new
-    @parent = Parent.new 
+    @parent = Parent.new
   end
 
-  def create 
+  def create
     @parent = Parent.new[parent_params]
     @parent.user_id = current_user.id
     if @parent.save
@@ -17,8 +17,8 @@ before_action  :find_id, [:show, :edit, :update, :destroy]
 
   def show
   end
- 
-  def edit  
+
+  def edit
   end
 
   def update
@@ -31,11 +31,6 @@ before_action  :find_id, [:show, :edit, :update, :destroy]
     redirect_to pages_path
   end
 
-
-
-
-end
-
 private
 
   def parents_params
@@ -45,3 +40,7 @@ private
   def find_id
      @parent = Parent.find(params[:id])
   end
+
+
+end
+

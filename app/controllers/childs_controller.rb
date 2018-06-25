@@ -1,11 +1,11 @@
 class ChildsController < ApplicationController
 
-before_action  :find_id, [:show, :edit, :update, :destroy]
+before_action  :find_id, only:[:show, :edit, :update, :destroy]
   def new
-    @child = Child.new 
+    @child = Child.new
   end
 
-  def create 
+  def create
     @child = Child.new[child_params]
     @child.parent = current_user.parent
     if @child.save
@@ -18,8 +18,8 @@ before_action  :find_id, [:show, :edit, :update, :destroy]
 
   def show
   end
- 
-  def edit  
+
+  def edit
   end
 
   def update
@@ -34,9 +34,6 @@ before_action  :find_id, [:show, :edit, :update, :destroy]
 
 
 
-
-end
-
 private
 
   def childs_params
@@ -48,3 +45,6 @@ private
   end
 
 end
+
+
+
