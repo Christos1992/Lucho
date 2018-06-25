@@ -1,4 +1,17 @@
-<h1>new</h1>
+<html> 
+<%= simple_form_for @incidents do |f| %>
+  <%= f.input :fund, as: :select, collection: funds, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
+  <%= f.input :dose, hint: 'What was the precise dosage?' %>
+  <%= f.input :date_of_incident, hint: 'No special characters.' %>
+  <%= f.input :date_medication_received, placeholder: 'user@domain.com' %>
+  <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
+  <%= f.input :fund, collection: funds, prompt: 'What are the Side Effects?', label: false, input_html: { multiple: true } %>
+  <%= f.input :metric, placeholder: '' %>
+  <%= f.input :description, placeholder: 'Please describe the side effects...' %>
+  <%= f.button :submit %>
+<% end %>
+
+
 <% @allmedications.each do |medication| %>
 <%= medication.medication.name %>
 <!-- first medication is class of Child_Medication, second one is a class of Medicaiton (which is a list with all medications and their name/descriptio) -->
