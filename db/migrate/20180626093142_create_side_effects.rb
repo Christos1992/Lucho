@@ -1,0 +1,13 @@
+class CreateSideEffects < ActiveRecord::Migration[5.2]
+  def change
+    create_table :side_effects do |t|
+      t.string :name
+      t.string :none
+      t.string :mid
+      t.string :modarate
+      t.string :sever
+
+      t.timestamps
+    end
+  end
+end
