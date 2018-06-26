@@ -19,10 +19,10 @@
 </div>
 
 <div class="card-links-profiles-edit">
-  <%= link_to "Edit", edit_parent_path %>
+  <%= link_to "Edit", edit_parent_child_path(current_user.parent, @child) %>
   </div>
 <div class="card-links-profiles">
-     <%= link_to "Go to parent's profile", parent_path %> |
+     <%= link_to "Go to parent's profile", parent_path(current_user.parent, @child) %> |
      <%= link_to "Go to the Dashboard", parent_dashboard_path %>
 </div>
 
