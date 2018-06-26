@@ -3,9 +3,9 @@ class CreateSideEffects < ActiveRecord::Migration[5.2]
     create_table :side_effects do |t|
       t.string :name
       t.string :none
-      t.string :mid
-      t.string :modarate
-      t.string :sever
+      t.string :mild
+      t.string :moderate
+      t.string :severe
 
       t.timestamps
     end
