@@ -1,1 +1,33 @@
-<h1>Your profil</h1>
+<div class="container-profiles">
+<h1> Child's profile </h1>
+<div class="card-all-profiles">
+<div class="card-info">
+<h4>First name: <%= @child.first_name %></h4>
+<h4>Last name: <%= @child.last_name %></h4>
+<h4>Gender: <%= @child.gender %></h4>
+<h4>Date of birth: <%= @child.date_of_birth %></h4>
+<h4>Type of cancer: <%= @child.type_of_cancer %></h4>
+<h4>Stage of cancer: <%= @child.stage_of_cancer %></h4>
+<h4>First time patient: <%= @child.first_time_patient %></h4>
+<h4>Date treatment begin: <%= @child.stage_of_cancer %></h4>
+<h4>Hospital name: <%= @child.stage_of_cancer %></h4>
+<h4>Doctor name: <%= @child.stage_of_cancer %></h4>
+<h4>School: <%= @child.stage_of_cancer %></h4>
+<h4>Biggest dream: <%= @child.biggest_dream%></h4>
+<h4>Medications: <%= @child.medications %></h4>
+</div>
+</div>
+
+<div class="card-links-profiles-edit">
+  <%= link_to "Edit", edit_parent_path %>
+  </div>
+<div class="card-links-profiles">
+     <%= link_to "Go to parent's profile", parent_path %> |
+     <%= link_to "Go to the Dashboard", parent_dashboard_path %>
+</div>
+
+<div style="height: 50px;">
+</div>
+</div>
+
+
