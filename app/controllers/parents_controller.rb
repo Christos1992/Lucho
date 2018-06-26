@@ -1,5 +1,9 @@
 class ParentsController < ApplicationController
 before_action  :find_id, only:[:show, :edit, :update, :destroy]
+
+def dashboard
+end
+
   def new
     @parent = Parent.new
   end

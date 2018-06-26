@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_115135) do
+ActiveRecord::Schema.define(version: 2018_06_26_094808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,25 @@ ActiveRecord::Schema.define(version: 2018_06_25_115135) do
     t.index ["user_id"], name: "index_parents_on_user_id"
   end
 
+  create_table "side_effect_incidents", force: :cascade do |t|
+    t.bigint "side_effect_id"
+    t.bigint "incident_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["incident_id"], name: "index_side_effect_incidents_on_incident_id"
+    t.index ["side_effect_id"], name: "index_side_effect_incidents_on_side_effect_id"
+  end
+
+  create_table "side_effects", force: :cascade do |t|
+    t.string "name"
+    t.string "none"
+    t.string "med"
+    t.string "modarate"
+    t.string "sever"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -106,4 +125,6 @@ ActiveRecord::Schema.define(version: 2018_06_25_115135) do
   add_foreign_key "children", "parents"
   add_foreign_key "incidents", "parents"
   add_foreign_key "parents", "users"
+  add_foreign_key "side_effect_incidents", "incidents"
+  add_foreign_key "side_effect_incidents", "side_effects"
 end
