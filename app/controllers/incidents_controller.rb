@@ -9,7 +9,11 @@ class IncidentsController < ApplicationController
     @incident = Incident.new
     @parent = current_user.parent
     @allmedications = current_user.parent.child.child_medications
-
+    @names =[]
+    @allmedications.each do |medication|
+      @names << medication.medication.name
+    end
+  
   end
 
   def create

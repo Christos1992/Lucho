@@ -1,18 +1,19 @@
+<h1>New Side Effect</h1>
 
-<%= simple_form_for @incident do |f| %>
-  <%= f.input :fund, as: :select, collection: funds, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
+<%= simple_form_for [@parent, @incident] do |f| %>
+
+    <%# @allmedications.each do |medication| %>
+      <%#= f.input :medication.medication.name, as: :select, collection: medication_name, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
+      <%# end %>
+  <%= f.input :child_medications, as: :select, collection: @names, placeholder: 'Choose the medication'   %>	
   <%= f.input :dose, hint: 'What was the precise dosage?' %>
-  <%= f.input :date_of_incident, hint: 'No special characters.' %>
+  <%= f.input :date_of_incident, start_year: Time.now.year,
+  end_year: Time.now.year,  hint: 'Please enter the date of the incident' %>
   <%= f.input :date_medication_received, placeholder: 'user@domain.com' %>
   <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
-  <%= f.input :fund, collection: funds, prompt: 'What are the Side Effects?', label: false, input_html: { multiple: true } %>
-  <%= f.input :metric, placeholder: '' %>
+  <%= f.input :side_effect, as: :select, collection: @names, placeholder: 'What were the side effects?' %>
   <%= f.input :description, placeholder: 'Please describe the side effects...' %>
-  <%= f.button :submit %>
+  <%= f.input :metric, placeholder: '' %>
+  <%= f.submit %>
 <% end %>
 
-
-<% @allmedications.each do |medication| %>
-<%= medication.medication.name %>
-<!-- first medication is class of Child_Medication, second one is a class of Medicaiton (which is a list with all medications and their name/descriptio) -->
-<% end %>
