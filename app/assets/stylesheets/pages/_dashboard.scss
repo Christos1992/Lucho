@@ -1,0 +1,49 @@
+.wrapper-dashboard {
+background-color: $luchoblue;
+margin-top:3.5em;
+padding: 30px 10px;
+color:white;
+height: 100vh;
+}
+
+.container-dashboard {
+
+}
+
+.block {
+  background: none;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.block.one {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+
+
+}
+
+.block.two {
+  grid-column: 2 / span 3;
+  grid-row: 1 / span 2;
+
+}
+
+.block.three {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 3;
+}
+
+.block.four {
+
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 3;
+}
