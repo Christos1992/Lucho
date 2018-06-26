@@ -1,1 +1,48 @@
-<h1>Welcome! Create your Kids profil</h1>
+<div class="container-logsign">
+<h2>Create your Kids profil</h2>
+<div class="card-all-info">
+<div class="card-info">
+
+ <%= simple_form_for [@parent, @child] do |f| %>
+
+    <div class="form-inputs">
+    <%= f.input :first_name, required: true, autofocus: true %>
+    <%= f.input :last_name, required: true, autofocus: true %>
+    <%= f.input :gender, required: true, autofocus: true %>
+    <%= f.input :date_of_birth, required: true, autofocus: true%>
+    <%= f.input :type_of_cancer, required: true, autofocus: true %>
+    <%= f.input :stage_of_cancer, required: true, autofocus: true %>
+    <%= f.input :first_time_patient, required: true, autofocus: true %>
+    <%= f.input :date_treatment_begin, required: true, autofocus: true %>
+    <%= f.input :hospital_name, required: true, autofocus: true %>
+    <%= f.input :doctor_name, required: true, autofocus: true %>
+    <%= f.input :school, required: true, autofocus: true %>
+    <%= f.input :biggest_dream, required: true, autofocus: true %>
+    <%= f.input :medications, required: true, autofocus: true %>
+    >
+  </div>
+
+</div>
+<div class="form-actions">
+    <%= f.button :submit, "Done", dashboard_path(@parent_id)  id: "btn"  %>
+  </div>
+  <% end %>
+  <div class="card-links">
+  <%= link_to "Go back to your info", parent_new_path(@parent_id) %>
+</div>
+</div>
+</div>
+<!-- t.string "first_name"
+    t.string "last_name"
+    t.string "gender"
+    t.date "date_of_birth"
+    t.string "type_of_cancer"
+    t.integer "stage_of_cancer"
+    t.boolean "first_time_patient"
+    t.date "date_treatment_begin"
+    t.string "hospital_name"
+    t.string "doctor_name"
+    t.boolean "school"
+    t.text "biggest_dream"
+    t.text "medications"
+    t.bigint "parent_id" -->
