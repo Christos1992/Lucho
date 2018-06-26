@@ -1,4 +1,4 @@
 class SideEffectIncident < ApplicationRecord
   belongs_to :incident
-  has_many :side_effects
+  belongs_to :side_effect
 end

@@ -9,13 +9,12 @@ class IncidentsController < ApplicationController
     @incident = Incident.new
     @parent = current_user.parent
     @allsideeffects = SideEffect.all
-
     @side_effect_names = []
     @allsideeffects.each do |sideeffect|
       @side_effect_names << sideeffect.name
     end
 
-
+    @side_effect_names = @side_effect_names.uniq
     @allmedications = current_user.parent.child.child_medications
     @names =[]
     @allmedications.each do |medication|

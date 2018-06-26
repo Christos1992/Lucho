@@ -2,18 +2,18 @@
 
 <%= simple_form_for [@parent, @incident] do |f| %>
 
-    <%# @allmedications.each do |medication| %>
-      <%#= f.input :medication.medication.name, as: :select, collection: medication_name, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
-      <%# end %>
   <%= f.input :child_medications, as: :select, collection: @names, placeholder: 'Choose the medication'   %>
   <%= f.input :dose, hint: 'What was the precise dosage?' %>
   <%= f.input :date_of_incident, start_year: Time.now.year,
   end_year: Time.now.year,  hint: 'Please enter the date of the incident' %>
   <%= f.input :date_medication_received, placeholder: 'user@domain.com' %>
   <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
-  <%= f.input :side_effect, as: :select, collection: @side_effect_names, placeholder: 'What were the side effects?' %>
+  <%#=# f.select_tag :side_effect_id, options_from_collection_for_select(Side_effect.all, :id, :name), multiple: true %>
+  <% @side_effect_names.each do |se|  %>
+   <span> <%= se %> : </span>
+  <%= f.select :side_effect_incidents, collection: SideEffect.where(name: se).map {|se| [se.metric, se.id]} %>
+  <% end %>
   <%= f.input :description, placeholder: 'Please describe the side effects...' %>
   <%= f.input :metric, placeholder: '' %>
   <%= f.submit %>
 <% end %>
-
