@@ -9,16 +9,15 @@
     <%= f.input :first_name, required: true, autofocus: true %>
     <%= f.input :last_name, required: true, autofocus: true %>
     <%= f.input :gender, required: true, autofocus: true %>
-    <%= f.input :date_of_birth %>
-    <%= f.input :working_status %>
-    <%= f.input :civil_status %>
-    <%= f.input :hobbies %>
+    <%= f.input :date_of_birth, required: true, autofocus: true%>
+    <%= f.input :working_status, required: true, autofocus: true %>
+    <%= f.input :civil_status, required: true, autofocus: true %>
+    <%= f.input :hobbies, required: true, autofocus: true %>
     <%= f.input :share_info, required: true, autofocus: true %>
-
   </div>
 </div>
 <div class="form-actions">
-    <%= f.button :submit, "Done",  id: "btn"  %>
+    <%= f.button :submit, "Done", child_new_path(parent_id)  id: "btn"  %>
   </div>
   <% end %>
 </div>
