@@ -42,7 +42,7 @@ def intex
 
   private
   def ChildMedication_params
-   params.require(:conversation).permit(:perscriptioned_doses,:active, :days_for_useage)
+   params.require(:child_medication).permit(:perscriptioned_doses,:active, :days_for_useage)
   end
 
   def find_id

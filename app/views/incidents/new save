@@ -1,6 +1,3 @@
-<h1>New Side Effect</h1>
-
-
 new save
 <%= simple_form_for [@parent, @incident] do |f| %>
 
@@ -9,7 +6,8 @@ new save
       <%# end %>
   <%= f.input :child_medications, as: :select, collection: @names, placeholder: 'Choose the medication'   %>
   <%= f.input :dose, hint: 'What was the precise dosage?' %>
-  <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident' %>
+  <%= f.input :date_of_incident, start_year: Time.now.year,
+  end_year: Time.now.year,  hint: 'Please enter the date of the incident' %>
   <%= f.input :date_medication_received, placeholder: 'user@domain.com' %>
   <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
   <%= f.input :side_effect, as: :select, collection: @allsideeffects, placeholder: 'What were the side effects?' %>
@@ -17,27 +15,3 @@ new save
   <%= f.input :metric, placeholder: '' %>
   <%= f.submit %>
 <% end %>
-
-
-
-<div id="side_effect_incidents">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Side:effects:</h3>
-      <% if @incident.side_effect_incidents.empty? %>
-        <p>Choose a side effect</p>
-      <% else %>
-        <ul class="list-group">
-          <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-            <li>
-             </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-  <div style="height: 50px;">
-    </div>
-  </div>
