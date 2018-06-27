@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
 
-resources :parents, only:[:new, :create, :edit, :show, :update, :destroy] do
+resources :parents, only:[:new, :create, :edit, :show, :update, :destroy, :calendar] do
   get "dashboard"
   resources :children, only:[:new, :create, :edit, :update, :destroy, :show] do
     resources :child_medications, only:[:new, :create, :edit, :update, :destroy, :show]
