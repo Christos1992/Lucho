@@ -12,6 +12,17 @@ $(function() {
 
     // your event source
     {
+      events: [
+    {
+      title: <%= current_user.parent.first_name%>,
+      start: '2018-06-06'
+    },
+    {
+      title: 'Event2',
+      start: '2018-06-06'
+    }
+    // etc...
+  ],
       url: '/myfeed.php', // use the `url` property
       color: 'yellow',    // an option!
       textColor: 'black'  // an option!

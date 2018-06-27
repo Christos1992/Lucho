@@ -12,21 +12,26 @@
   margin-bottom:20px;
   font-weight: 200;
   color: white;
-  box-shadow: 0px 0px 1px #E6E6E6;
+  //box-shadow: 0px 0px 1px #E6E6E6;
 
 }
 
 .center-calendar{
   margin: 0 auto;
-  width: 70%;
+  width: 84%;
   height: 70%;
   background-color: transparent;
 }
 
 #calendar {
+  opacity: 0.6;
 
 }
 .fc-toolbar h2 {
   color:black;
-  font-weight: 200;
+  font-weight: 300;
+}
+
+.fc-day-header{
+font-weight: 400;
 }
