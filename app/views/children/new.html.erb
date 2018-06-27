@@ -1,6 +1,6 @@
 <div class="container-logsign">
-<h2>Create your Kids profil</h2>
-<div class="card-all-info">
+<h2>Create your Kid's profile</h2>
+<div class="card-all-info-children">
 <div class="card-info">
 
  <%= simple_form_for [@parent, @child] do |f| %>
@@ -11,7 +11,8 @@
     <%= f.input :gender, required: true, autofocus: true %>
     <%= f.input :date_of_birth, required: true, autofocus: true%>
     <%= f.input :type_of_cancer, required: true, autofocus: true %>
-    <%= f.input :stage_of_cancer, required: true, autofocus: true %>
+    <%= f.input :stage_of_cancer, required: true, autofocus: true %>(1 to 5) 1: earliest stage, 5: maturest stage)
+
     <%= f.input :first_time_patient, required: true, autofocus: true %>
     <%= f.input :date_treatment_begin, required: true, autofocus: true %>
     <%= f.input :hospital_name, required: true, autofocus: true %>
@@ -19,29 +20,18 @@
     <%= f.input :school, required: true, autofocus: true %>
     <%= f.input :biggest_dream, required: true, autofocus: true %>
     <%= f.input :medications, required: true, autofocus: true %>
-    >
+
   </div>
 
 </div>
 <div class="form-actions">
-    <%= f.button :submit, "Done", id: "btn"  %>
+    <%= f.button :submit, "Done", id: "btn-child"  %>
   </div>
   <% end %>
   <div class="card-links">
+     <%= link_to "Go back to previous page", parent_path(@parent) %>
 </div>
 </div>
+<div style = "height: 100px;">
 </div>
-<!-- t.string "first_name"
-    t.string "last_name"
-    t.string "gender"
-    t.date "date_of_birth"
-    t.string "type_of_cancer"
-    t.integer "stage_of_cancer"
-    t.boolean "first_time_patient"
-    t.date "date_treatment_begin"
-    t.string "hospital_name"
-    t.string "doctor_name"
-    t.boolean "school"
-    t.text "biggest_dream"
-    t.text "medications"
-    t.bigint "parent_id" -->
+</div>

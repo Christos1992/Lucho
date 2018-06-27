@@ -1,1 +1,36 @@
-<h1>Edit your profil</h1>
+<div class="container-logsign">
+<h2>Edit your Kid's profile</h2>
+<div class="card-all-info-children">
+<div class="card-info">
+
+ <%= simple_form_for [@parent, @child] do |f| %>
+
+    <div class="form-inputs">
+    <%= f.input :first_name, required: true, autofocus: true %>
+    <%= f.input :last_name, required: true, autofocus: true %>
+    <%= f.input :gender, required: true, autofocus: true %>
+    <%= f.input :date_of_birth, required: true, autofocus: true%>
+    <%= f.input :type_of_cancer, required: true, autofocus: true %>
+    <%= f.input :stage_of_cancer, required: true, autofocus: true %>(1 to 5) 1: earliest stage, 5: maturest stage)
+
+    <%= f.input :first_time_patient, required: true, autofocus: true %>
+    <%= f.input :date_treatment_begin, required: true, autofocus: true %>
+    <%= f.input :hospital_name, required: true, autofocus: true %>
+    <%= f.input :doctor_name, required: true, autofocus: true %>
+    <%= f.input :school, required: true, autofocus: true %>
+    <%= f.input :biggest_dream, required: true, autofocus: true %>
+    <%= f.input :medications, required: true, autofocus: true %>
+
+  </div>
+
+</div>
+<div class="form-actions">
+    <%= f.button :submit, "Done", id: "btn-child"  %>
+  </div>
+  <% end %>
+
+</div>
+</div>
+<div style = "height: 100px;">
+</div>
+</div>
