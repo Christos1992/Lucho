@@ -2,17 +2,23 @@
 <h1> Parent's profile </h1>
 <div class="card-all-profiles">
 <div class="card-info">
-<h4>First name: <%= @child.first_name %></h4>
-<h4>Last name: <%= @child.last_name %></h4>
-<h4>Gender: <%= @child.gender %></h4>
-<h4>Date of birth: <%= @child.date_of_birth %></h4>
-<h4>Working status: <%= @child.working_status %></h4>
-<h4>Civil status: <%= @child.civil_status %></h4>
-<h4>Hobbies: <%= @child.first_time_patient %></h4>
-<h4>Share info: <%= @child.stage_of_cancer %></h4>
+<h4>First name: <%= @parent.first_name %></h4>
+<h4>Last name: <%= @parent.last_name %></h4>
+<h4>Gender: <%= @parent.gender %></h4>
+<h4>Date of birth: <%= @parent.date_of_birth %></h4>
+<h4>Working status: <%= @parent.working_status %></h4>
+<h4>Civil status: <%= @parent.civil_status %></h4>
+<h4>Hobbies: <%= @parent.hobbies %></h4>
+<h4>Share info: <%= @parent.share_info %></h4>
 </div>
 </div>
-
+<div class="card-links-profiles-edit">
+  <%= link_to "Edit", edit_parent_path(@parent) %>
+  </div>
+<div class="card-links-profiles">
+     <%= link_to "Go to your Child's profile", parent_child_path(@parent, @parent.child) %> |
+     <%= link_to "Go to the Dashboard", parent_dashboard_path(@parent) %>
+</div>
 
 </div>
 <div style="height: 50px;">
