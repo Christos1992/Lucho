@@ -96,9 +96,9 @@ ActiveRecord::Schema.define(version: 2018_06_26_094808) do
   create_table "side_effects", force: :cascade do |t|
     t.string "name"
     t.string "none"
-    t.string "mild"
-    t.string "moderate"
-    t.string "severe"
+    t.string "mid"
+    t.string "modarate"
+    t.string "sever"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
