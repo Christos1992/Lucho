@@ -19,6 +19,13 @@ h1 {
   color: white;
 }
 }
+.datepicker .d-flex {
+  display: flex;
+}
+.datepicker select {
+    margin: 5px;
+}
+
 
 
 .card-all-profiles{
@@ -60,11 +67,22 @@ background-color: rgb(36, 66, 97);
   }
 }
 
-#btn-dashboard {
-  //margin-top: px;
-  background-color: #E8B55A;
+// #btn-dashboard {
+//   width: 130px;
+//   background-color: #E8B55A;
+//   color: #173F5E;
+//   font-weight: 0%;
+//   border-radius: 5px;
+//   border: white 2px solid;
+// }
+
+ #btn-show {
+  width: 100px;
+   background-color: #E8B55A;
   color: #173F5E;
-  font-weight: 10%;
+  margin-bottom: -15%;
+  font-weight: 0%;
   border-radius: 5px;
   border: white 2px solid;
+  font-size: 18px;
 }
