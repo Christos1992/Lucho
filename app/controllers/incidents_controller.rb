@@ -35,10 +35,20 @@ class IncidentsController < ApplicationController
   end
 
   def show
+    @side_effect_incident = SideEffectIncident.new
+    @parent = current_user.parent
     @allsideeffects = SideEffect.all
 
-    @side_effect_incident =SideEffectIncident.new
-    raise
+    @side_effect_names = []
+    @allsideeffects.each do |sideeffect|
+      @side_effect_names << sideeffect.name
+    end
+
+    @allmedications = current_user.parent.child.child_medications
+    @names =[]
+    @allmedications.each do |medication|
+      @names << medication.medication.name
+    end
   end
 
   def edit
