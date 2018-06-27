@@ -10,7 +10,9 @@ resources :parents, only:[:new, :create, :edit, :show, :update, :destroy, :calen
     resources :child_medications, only:[:new, :create, :edit, :update, :destroy, :show]
   end
     resources :incidents do
-      resources :side_effect_incidents
+      resources :side_effect_incidents do
+        resources :side_effects
+      end
     end
   end
 

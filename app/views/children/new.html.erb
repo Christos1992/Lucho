@@ -11,7 +11,7 @@
     <%= f.input :gender, required: true, autofocus: true %>
     <%= f.input :date_of_birth, required: true, autofocus: true%>
     <%= f.input :type_of_cancer, required: true, autofocus: true %>
-    <%= f.input :stage_of_cancer, required: true, autofocus: true %>(1 to 5) 1: earliest stage, 5: maturest stage)
+    <%= f.input :stage_of_cancer, required: true, autofocus: true %>(1 to 5) 1: earliest stage, 5: maturest stage
 
     <%= f.input :first_time_patient, required: true, autofocus: true %>
     <%= f.input :date_treatment_begin, required: true, autofocus: true %>
@@ -28,10 +28,8 @@
     <%= f.button :submit, "Done", id: "btn-child"  %>
   </div>
   <% end %>
-  <div class="card-links">
-     <%= link_to "Go back to previous page", parent_path(@parent) %>
-</div>
-</div>
+
 <div style = "height: 100px;">
+  </div>
 </div>
 </div>
