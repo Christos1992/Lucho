@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
 resources :parents, only:[:new, :create, :edit, :show, :update, :destroy, :calendar] do
   get "dashboard"
+  get "calendar"
   resources :children, only:[:new, :create, :edit, :update, :destroy, :show] do
     resources :child_medications, only:[:new, :create, :edit, :update, :destroy, :show]
   end
