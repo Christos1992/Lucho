@@ -14,6 +14,8 @@
         <ul class="list-group">
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
           <%= side_effect_incident.side_effect.name %>
+          <%= f.input :side_effect, as: :select, collection: [side_effect_incident.side_effect.mild, placeholder: 'What were the side effects?' %>
+
             <li>
              </li>
           <% end %>

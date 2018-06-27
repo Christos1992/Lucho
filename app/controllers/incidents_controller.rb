@@ -38,7 +38,7 @@ class IncidentsController < ApplicationController
     @allsideeffects = SideEffect.all
 
     @side_effect_incident =SideEffectIncident.new
-
+    raise
   end
 
   def edit
