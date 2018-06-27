@@ -1,1 +1,15 @@
 <h1>index</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @incidents.each do |incident| %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://s-i.huffpost.com/gen/4394056/images/n-OCEANS-628x314.jpg');">
+        <div class="card-category"> <%= incident.medication_name %></div>
+        <div class="card-description">
+        <h2><%= incident.side_effect %></h2>
+        <p><%= incident.date_of_incident %></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <% end %>
