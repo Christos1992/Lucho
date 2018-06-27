@@ -6,8 +6,12 @@ Rails.application.routes.draw do
 resources :parents, only:[:new, :create, :edit, :show, :update, :destroy] do
   get "dashboard"
   resources :children, only:[:new, :create, :edit, :update, :destroy, :show] do
-    resources :childmedications
+    resources :child_medications, only:[:new, :create, :edit, :update, :destroy, :show]
   end
-    resources :incidents
+    resources :incidents do
+      resources :side_effect_incidents
+    end
   end
+
+
 end

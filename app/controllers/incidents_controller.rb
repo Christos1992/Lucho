@@ -6,6 +6,8 @@ class IncidentsController < ApplicationController
   end
 
   def new
+
+    @side_effect_incident = SideEffectIncident.new
     @incident = Incident.new
     @parent = current_user.parent
     @allsideeffects = SideEffect.all
@@ -15,26 +17,28 @@ class IncidentsController < ApplicationController
       @side_effect_names << sideeffect.name
     end
 
-
     @allmedications = current_user.parent.child.child_medications
     @names =[]
     @allmedications.each do |medication|
       @names << medication.medication.name
     end
-
   end
 
   def create
     @incident = Incident.new(incident_params)
     @incident.parent = Parent.find(current_user.parent.id)
     if @incident.save
-      redirect_to incident_path(@incident)
+      redirect_to parent_incident_path(current_user.parent,@incident)
     else
       render 'new'
     end
   end
 
   def show
+    @allsideeffects = SideEffect.all
+
+    @side_effect_incident =SideEffectIncident.new
+
   end
 
   def edit
@@ -52,7 +56,7 @@ class IncidentsController < ApplicationController
 
   private
   def incident_params
-   params.require(:conversation).permit(:medication_name, :dose, :period,:side_effect, :description, :metric, :date_medication_recreived, :date_of_incident)
+   params.require(:incident).permit(:medication_name, :dose, :period,:side_effect, :description, :metric, :date_medication_recreived, :date_of_incident)
   end
 
   def find_id

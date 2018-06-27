@@ -1,0 +1,19 @@
+function refreshForm(formHTML) {
+  const currentForm = document.getElementById('new_side_effect_incident');
+  currentForm.innerHTML = formHTML;
+}
+
+function addside_effect_incident(newside_effect_incident) {
+  const messageList = document.getElementById('side_effect_incidents');
+  messageList.insertAdjacentHTML('beforeend', newside_effect_incident);
+}
+
+
+
+<% if @side_effect_incident.persisted? %>
+
+  addside_effect_incident('<%= j render "side_effect_incidents/show", side_effect_incident: @side_effect_incident %>')
+  refreshForm('<%= j render "side_effect_incidents/form", incident: @incident, side_effect_incident: SideEffectIncident.new %>');
+<% else %>
+  refreshForm('<%= j render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>');
+<% end %>
