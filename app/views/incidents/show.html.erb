@@ -13,9 +13,10 @@
       <% else %>
         <ul class="list-group">
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-          <%= side_effect_incident.side_effect.name %>
-          <%= f.input :side_effect, as: :select, collection: [side_effect_incident.side_effect.mild, placeholder: 'What were the side effects?' %>
-
+<% side_effect_incident.side_effect.name %>
+            <%#= simple_form_for [current_user.parent, @insident, side_effect_incident, side_effect_incident.side_effect] do |f| %>
+            <%#= f.input :name, as: :select, collection: [["mild"],["moderate"],["severe"]], placeholder: 'What were the side effects?' %>
+             <%# end %>
             <li>
              </li>
           <% end %>

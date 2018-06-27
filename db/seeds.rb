@@ -18,13 +18,17 @@ Parent.create!(first_name: "Christos", last_name: "Angel", gender:"male", date_o
 puts "creating a child"
 Child.create!(first_name: "Jonas", last_name: "Montan", gender: "boy", date_of_birth: "22/03/1983", type_of_cancer: "Leukemia", stage_of_cancer: 1, first_time_patient: true, date_treatment_begin: "11/11/2017", hospital_name: "saint george", doctor_name: "Dr.Love", school: true, biggest_dream: "go to the moon", parent_id: 1)
 
-#External Radiation Side Effects 
-SideEffect.create!(name: "Fatigue", mild: "Normal activity with effort", moderate: "In bed less than half of day", severe: "In bed more than hald of the day")
-SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", mild: "Faint redness and scaling", moderate: "Redness or moist peeling especially at skin folds", severe: "Swelling and moist peeling in large area or ulcer in skin")
-SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
+#External Radiation Side Effects
+SideEffect.create!(name: "Fatigue", metric: "Mild - Normal activity with effort")
+SideEffect.create!(name: "Fatigue", metric: "Modarate - In bed less than half of day")
+SideEffect.create!(name: "Fatigue", metric:"Severe - In bed more than hald of the day")
+SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric:" Mild - Faint redness and scaling")
+SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric:"Moderate - Redness or moist peeling especially at skin folds")
+SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric: " Severe -Swelling and moist peeling in large area or ulcer in skin")
+# SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
 
-#Chemotherapy Side Effects
-SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
-SideEffect.create!(name: "Fatigue", mild: "Normal activity with effort", moderate: "In bed less than half of day", severe: "In bed more than hald of the day")
-SideEffect.create!(name: "Nausea", mild: "Can eat", moderate: "Eating/drinking less than normal", severe: "Cant eat or drink")
+# #Chemotherapy Side Effects
+# SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
+# SideEffect.create!(name: "Fatigue", mild: "Normal activity with effort", moderate: "In bed less than half of day", severe: "In bed more than hald of the day")
+# SideEffect.create!(name: "Nausea", mild: "Can eat", moderate: "Eating/drinking less than normal", severe: "Cant eat or drink")
 
