@@ -23,11 +23,12 @@ before_action  :find_id, only:[:show, :edit, :update, :destroy]
   end
 
   def edit
+    @parent = @child.parent
   end
 
   def update
-    @child.update[childs_params]
-    redirect_to pages_path
+    @child.update(child_params)
+    redirect_to parent_child_path(current_user.parent, @child)
   end
 
   def delete

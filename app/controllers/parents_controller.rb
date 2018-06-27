@@ -27,6 +27,11 @@ before_action  :find_id, only:[:show, :edit, :update, :destroy]
 
   end
 
+  def update
+    @parent.update(parent_params)
+    redirect_to parent_path(@parent)
+  end
+
 private
   def parent_params
     params.require(:parent).permit(:first_name, :last_name, :date_of_birth, :working_status, :civil_status, :hobbies, :share_info, :gender, :user_id)
