@@ -8,12 +8,20 @@ class IncidentsController < ApplicationController
   def new
     @incident = Incident.new
     @parent = current_user.parent
+    @allsideeffects = SideEffect.all
+
+    @side_effect_names = []
+    @allsideeffects.each do |sideeffect|
+      @side_effect_names << sideeffect.name
+    end
+
+
     @allmedications = current_user.parent.child.child_medications
     @names =[]
     @allmedications.each do |medication|
       @names << medication.medication.name
     end
-  
+
   end
 
   def create

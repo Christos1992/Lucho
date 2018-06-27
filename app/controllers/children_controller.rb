@@ -1,8 +1,10 @@
-class ChildsController < ApplicationController
+class ChildrenController < ApplicationController
 
 before_action  :find_id, only:[:show, :edit, :update, :destroy]
   def new
+    @parent = current_user.parent
     @child = Child.new
+
   end
 
   def create
@@ -36,7 +38,7 @@ before_action  :find_id, only:[:show, :edit, :update, :destroy]
 
 private
 
-  def childs_params
+  def child_params
     params.require(:child).permit(:first_name, :last_name, :date_of_birth, :gender, :type_of_cancer, :stage_of_cancer, :first_time_patient, :date_treatment_begin, :hospital_name, :doctor_name, :school, :biggest_dream, :medications,)
   end
 
