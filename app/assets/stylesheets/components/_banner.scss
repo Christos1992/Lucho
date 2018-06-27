@@ -27,7 +27,7 @@
 
 
 
-button{
+button.home {
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   margin-top:30px;
   background:$luchoblue;
@@ -46,12 +46,12 @@ button{
 
 
 }
-button:hover{
+button.home:hover{
   background:none;
   color:$luchoblue;
   font-size: thin;
 }
-button:before,button:after{
+button.home:before,button.home:after{
   content:'';
   position:absolute;
   top:0;
@@ -61,13 +61,13 @@ button:before,button:after{
   background: #173F5E;
   transition:400ms ease all;
 }
-button:after{
+button.home:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-button:hover:before,button:hover:after{
+button.home:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
