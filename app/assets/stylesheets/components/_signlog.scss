@@ -26,7 +26,7 @@ h2 {
 .card-all {
   background-color: rgb(36, 66, 97);
   padding: 5px;
-  height: 400px;
+  //height: 400px;
 }
 
 .card-allpassword {
@@ -34,12 +34,17 @@ background-color: rgb(36, 66, 97);
   padding: 5px;
   height: 200px;
 }
-.card-all-info {
+.card-all-info-parents {
 background-color: rgb(36, 66, 97);
   padding: 5px;
   height: 770px;
 }
 
+.card-all-info-children {
+background-color: rgb(36, 66, 97);
+  padding: 5px;
+  //height: 1400px;
+}
 .card-info {
   color: white;
   display: center;
@@ -74,6 +79,14 @@ background-color: rgb(36, 66, 97);
   color: white
 }
 
+#btn-child {
+  //margin-top: 10px;
+  width: 100px;
+  background-color: green;
+  color: white;
+  margin-bottom: -5%;
+}
+
 
 .card-links {
   margin-top: 50px;
@@ -93,3 +106,6 @@ background-color: rgb(36, 66, 97);
   margin-bottom: 40px;
 }
 
+a {
+  color: #0000FF;
+}

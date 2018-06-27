@@ -1,7 +1,7 @@
 <div class="container-logsign">
 <h2>Create your profile</h2>
 <div class="card-all-info">
-<div class="card-info">
+<div class="card-info-parents">
 
  <%= simple_form_for(@parent) do |f| %>
 
@@ -16,12 +16,14 @@
     <%= f.input :share_info, required: true, autofocus: true %>
   </div>
 </div>
+
 <div class="form-actions">
     <%= f.button :submit, "Done", id: "btn"  %>
   </div>
   <% end %>
 </div>
-<div style = "height: 150px;">
+
+<div style = "height: 100px;">
   </div>
 </div>
 
