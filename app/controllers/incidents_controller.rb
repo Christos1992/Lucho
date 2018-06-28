@@ -66,6 +66,19 @@ class IncidentsController < ApplicationController
     redirect_to incidents_path
   end
 
+  def events
+    @incidents = []
+    current_user.parent.incidents.each do |inc|
+      @incidents << { title: "medicaiton",
+        start: inc.created_at,
+        end: inc.created_at
+        }
+    end
+
+    render json: @incidents
+  end
+
+
   private
   def incident_params
    params.require(:incident).permit(:medication_name, :dose, :period,:side_effect, :description, :metric, :date_medication_recreived, :date_of_incident)
