@@ -1,3 +1,7 @@
 import "bootstrap";
 import $ from 'jquery';
-import 'fullcalendar';
+import {fullCalendar} from  'fullcalendar';
+$(function() {
+  $('#calendar').fullCalendar({});
+
+})
