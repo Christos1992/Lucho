@@ -1,6 +1,14 @@
 <div class="banner">
 <h1> Welcome on The Lucho App</h1>
 
-<button class="home">Discover It</button>
+<% if user_signed_in? %>
+<%= link_to parent_dashboard_path(current_user.parent) do %>
+    <button class="home">Discover It</button>
+    <%end %>
+    <% else %>
+    <%= link_to user_session_path do%>
+    <button class="home">Discover It</button>
+    <%end %>
 
+  <% end %>
 </div>
