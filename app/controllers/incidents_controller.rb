@@ -69,10 +69,22 @@ class IncidentsController < ApplicationController
   def events
     @incidents = []
     current_user.parent.incidents.each do |inc|
-      @incidents << { title: "medicaiton",
-        start: inc.created_at,
-        end: inc.created_at
-        }
+
+      # title =
+      # @incidents << { title: inc.created_at,
+      #   start: inc.created_at,
+      #   end: inc.created_at,
+      #   color: 'blue'
+      #   }
+        inc.side_effects.each do |se|
+         @incidents << {
+           title: se.name ,
+           start: inc.created_at,
+        end: inc.created_at,
+        color: 'red'
+
+         }
+      end
     end
 
     render json: @incidents

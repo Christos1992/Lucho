@@ -6,7 +6,9 @@ initUpdateNavbarOnScroll();
 
 $(function() {
   $('#calendar').fullCalendar({
-    events: "/events"
+    events: '/events',
+
+
   });
 
 })

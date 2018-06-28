@@ -1,5 +1,5 @@
 <%= simple_form_for([ current_user.parent, incident, side_effect_incident ], remote: true) do |form| %>
-  <%= select_tag "select_side_effect", options_from_collection_for_select(@side_effect_names, "name", "name"), prompt: 'choose' %>
+  <%= select_tag "select_side_effect", options_from_collection_for_select(@side_effect_names, "name", "name"), prompt: 'Choose a side effect' %>
 
   <div class="effects">
   <%  @side_effect_names.each do  | side_effect_name|  %>
@@ -11,29 +11,20 @@
 <% end %>
 <script type="text/javascript">
   document.querySelectorAll('.hide-this').forEach( el =>  el.disabled = true )
-// select input
- const currentSelection = document.getElementById('select_side_effect');
-
-// add event listener  ---> change
+  let currentSelection = document.getElementById('select_side_effect');
   currentSelection.addEventListener("change", (event) =>{
-
-     document.querySelectorAll('.effects .side_effect_incident_side_effect_id').forEach(el => el.classList.add('hide-this'))
+    document.querySelectorAll('.effects .side_effect_incident_side_effect_id').forEach(el => el.classList.add('hide-this'))
     let name = 'metric-'+ event.currentTarget.value
-    console.log(event.currentTarget.value);
-    const currentEffect = document.getElementById(name)
+    let currentEffect = document.getElementById(name)
     currentEffect.classList.remove('hide-this')
     currentEffect.disabled = false
-    console.log(currentEffect.disabled);
     document.querySelectorAll(".hide-this select").forEach(el => {
-    console.log(el)
      el.name = ""
-    console.log(el)
 
-
+     // currentSelection.classList.add('hide-this')
       });
-
-    // currentSelection.value = ''
-    // currentSelection.classList.add('hide-this'
+    currentEffect.querySelector("select").name = "side_effect_incident[side_effect_id]"
+   currentSelection.value = ''
   });
 
 </script>

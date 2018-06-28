@@ -1,19 +1,40 @@
 function refreshForm(formHTML) {
-  const currentForm = document.getElementById('new_side_effect_incident_side_effect_id');
+  const currentForm = document.getElementById('new_side_effect_incident');
   currentForm.innerHTML = formHTML;
+  getAlltoWork()
 }
 
 function addside_effect_incident(newside_effect_incident) {
   const messageList = document.getElementById('side_effect_incidents');
   messageList.insertAdjacentHTML('beforeend', newside_effect_incident);
+  getAlltoWork()
 }
 
 
 
 <% if @side_effect_incident.persisted? %>
 
-  addside_effect_incident('<%= j render "side_effect_incidents/show", side_effect_incident: @side_effect_incident %>')
+  addside_effect_incident('<%= j render "side_effect_incidents/show", side_effect_incident: @side_effect_incident %>');
   refreshForm('<%= j render "side_effect_incidents/form", incident: @incident, side_effect_incident: SideEffectIncident.new %>');
 <% else %>
   refreshForm('<%= j render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>');
 <% end %>
+
+function getAlltoWork(){
+  document.querySelectorAll('.hide-this').forEach( el =>  el.disabled = true )
+  let currentSelection = document.getElementById('select_side_effect');
+  currentSelection.addEventListener("change", (event) =>{
+    document.querySelectorAll('.effects .side_effect_incident_side_effect_id').forEach(el => el.classList.add('hide-this'))
+    let name = 'metric-'+ event.currentTarget.value
+    let currentEffect = document.getElementById(name)
+    currentEffect.classList.remove('hide-this')
+    currentEffect.disabled = false
+    document.querySelectorAll(".hide-this select").forEach(el => {
+     el.name = ""
+
+     // currentSelection.classList.add('hide-this')
+      });
+    currentEffect.querySelector("select").name = "side_effect_incident[side_effect_id]"
+   currentSelection.value = ''
+  });
+}
