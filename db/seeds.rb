@@ -24,9 +24,9 @@ ChildMedication.create!(perscriptioned_doses: 1, medication_id: 1, child_id: 1)
 SideEffect.create!(name: "Fatigue", metric: "Mild - Normal activity with effort")
 SideEffect.create!(name: "Fatigue", metric: "Modarate - In bed less than half of day")
 SideEffect.create!(name: "Fatigue", metric:"Severe - In bed more than hald of the day")
-SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric:" Mild - Faint redness and scaling")
-SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric:"Moderate - Redness or moist peeling especially at skin folds")
-SideEffect.create!(name: "Skin Irritation (in areas where radiation therapy is given)", metric: " Severe -Swelling and moist peeling in large area or ulcer in skin")
+SideEffect.create!(name: "Skin Irritation ", metric:" Mild - Faint redness and scaling")
+SideEffect.create!(name: "Skin Irritation ", metric:"Moderate - Redness or moist peeling especially at skin folds")
+SideEffect.create!(name: "Skin Irritation ", metric: " Severe -Swelling and moist peeling in large area or ulcer in skin")
 # SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
 
 # #Chemotherapy Side Effects
