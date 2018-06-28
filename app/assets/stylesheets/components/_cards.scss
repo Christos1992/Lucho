@@ -42,10 +42,12 @@ h1 {
   left: 10px;
   font-size: 15px;
   text-transform: uppercase;
+  font-size: 22px;
 }
 .card-description {
   position: absolute;
-  bottom: 2px;
+  text-align: center;
+  bottom: 10px;
   left: 10px;
 }
 .card-description h2 {
@@ -61,6 +63,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: black;
+  margin-top: 240px;
 }
 .card-link {
   position: absolute;
