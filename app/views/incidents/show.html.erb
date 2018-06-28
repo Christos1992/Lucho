@@ -1,4 +1,12 @@
 <h1>show</h1>
+
+
+
+
+
+
+
+
   <div class="row">
     <div class="col-xs-12">
       <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
@@ -22,3 +30,9 @@
     </div>
   </div>
 </div>
+
+
+
+<%= link_to edit_parent_incident_path(current_user.parent, @incident) do %>
+<button class="home">Got to edit</button>
+<% end %>
