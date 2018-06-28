@@ -8,16 +8,15 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
 @import "profiles/index";
+@import "components/cards";
 
 .hide-this {
   display: none;
 }
 
 @import "fullcalendar";
-

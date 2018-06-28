@@ -1,43 +1,32 @@
-<h1>New Side Effect</h1>
+<div class="container-logsign">
+<h2>New Side Effect</h2>
+<div class="card-all">
+<div class="card-info">
 
 
-new save
 <%= simple_form_for [@parent, @incident] do |f| %>
+  <div class="form-inputs">
 
     <%# @allmedications.each do |medication| %>
       <%#= f.input :medication.medication.name, as: :select, collection: medication_name, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
       <%# end %>
-  <%= f.input :child_medications, as: :select, collection: @names, placeholder: 'Choose the medication'   %>
-  <%= f.input :dose, hint: 'What was the precise dosage?' %>
-  <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident' %>
-  <%= f.input :date_medication_received, placeholder: 'user@domain.com' %>
+  <%= f.input :medication_name, placeholder: 'Choose the medication'   %>
+  <%= f.input :dose, placeholder: 'What was the precise dosage?' %>
+  <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident', wrapper_html: { class: 'datepicker'} %>
+  <%= f.input :date_medication_received, placeholder: 'user@domain.com', wrapper_html: { class: 'datepicker'}  %>
   <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
-  <%= f.input :side_effect, as: :select, collection: @allsideeffects, placeholder: 'What were the side effects?' %>
-  <%= f.input :description, placeholder: 'Please describe the side effects...' %>
-  <%= f.input :metric, placeholder: '' %>
-  <%= f.submit %>
-<% end %>
-
-
-
-<div id="side_effect_incidents">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Side:effects:</h3>
-      <% if @incident.side_effect_incidents.empty? %>
-        <p>Choose a side effect</p>
-      <% else %>
-        <ul class="list-group">
-          <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-            <li>
-             </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
-  </div>
+  <%= f.input :description, placeholder: "What's about the incident?" %>
 </div>
+<div class="form-actions">
+    <%= f.button :submit, "Continue", id: "btn-sideffects"  %>
+  </div>
+<% end %>
+</div>
+
 
   <div style="height: 50px;">
     </div>
-  </div>
+    </div>
+    <div style="height: 50px;"></div>
+
+</div>

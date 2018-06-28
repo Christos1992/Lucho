@@ -1,7 +1,7 @@
 class IncidentsController < ApplicationController
   before_action :find_id, only: [:show, :edit, :update, :destroy]
 
-  def intex
+  def index
     @incidents = Incident.all
   end
 
@@ -41,9 +41,11 @@ class IncidentsController < ApplicationController
 
     @side_effect_names = []
     @allsideeffects.each do |sideeffect|
-      @side_effect_names << sideeffect.name
+      if !@side_effect_names.include? "#{sideeffect.name}"
+        @side_effect_names << sideeffect
+      end
     end
-
+    @side_effect_names = @side_effect_names.uniq { |p| p.name }
     @allmedications = current_user.parent.child.child_medications
     @names =[]
     @allmedications.each do |medication|
@@ -63,6 +65,19 @@ class IncidentsController < ApplicationController
     @incident.destroy
     redirect_to incidents_path
   end
+
+  def events
+    @incidents = []
+    current_user.parent.incidents.each do |inc|
+      @incidents << { title: "medicaiton",
+        start: inc.created_at,
+        end: inc.created_at
+        }
+    end
+
+    render json: @incidents
+  end
+
 
   private
   def incident_params

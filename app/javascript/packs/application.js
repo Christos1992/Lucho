@@ -5,6 +5,8 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 
 $(function() {
-  $('#calendar').fullCalendar({});
+  $('#calendar').fullCalendar({
+    events: "/events"
+  });
 
 })
