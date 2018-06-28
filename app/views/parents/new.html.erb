@@ -1,7 +1,7 @@
 <div class="container-logsign">
 <h2>Create your profile</h2>
-<div class="card-all-info">
-<div class="card-info-parents">
+<div class="card-all  ">
+<div class="card-info">
 
  <%= simple_form_for(@parent) do |f| %>
 
@@ -9,7 +9,7 @@
     <%= f.input :first_name, required: true, autofocus: true %>
     <%= f.input :last_name, required: true, autofocus: true %>
     <%= f.input :gender, required: true, autofocus: true %>
-    <%= f.input :date_of_birth, required: true, autofocus: true%>
+    <%= f.input :date_of_birth, required: true, autofocus: true, wrapper_html: { class: 'datepicker'}%>
     <%= f.input :working_status, required: true, autofocus: true %>
     <%= f.input :civil_status, required: true, autofocus: true %>
     <%= f.input :hobbies, required: true, autofocus: true %>
@@ -23,7 +23,7 @@
   <% end %>
 </div>
 
-<div style = "height: 100px;">
+<div style = "height: 150px;">
   </div>
 </div>
 

@@ -15,7 +15,7 @@ background-color:  #173F5E;
 //border: solid 0.1px;
 
 h2 {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 30px;
   color: white;
 }
@@ -34,7 +34,7 @@ background-color: rgb(36, 66, 97);
   padding: 5px;
   height: 200px;
 }
-.card-all-info-parents {
+.card-all-info {
 background-color: rgb(36, 66, 97);
   padding: 5px;
   height: 770px;
@@ -87,6 +87,16 @@ background-color: rgb(36, 66, 97);
   margin-bottom: -5%;
 }
 
+#btn-sideffects {
+  width: 100px;
+   background-color: #E8B55A;
+  color: #173F5E;
+  margin-bottom: -15%;
+  font-weight: 10%;
+  border-radius: 5px;
+  border: white 2px solid;
+}
+
 
 .card-links {
   margin-top: 50px;
@@ -107,5 +117,5 @@ background-color: rgb(36, 66, 97);
 }
 
 a {
-  color: #0000FF;
+  color: #E8B55A;
 }

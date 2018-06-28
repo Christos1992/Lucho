@@ -1,20 +1,20 @@
 /* Main navbar */
 .navbar-wagon {
 
-  background: none;
-  transition: all 0.3s ease;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 4;
   height: 3.5em;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 10000;
   font-weight: 300;
+
 
 
   // transition: all 0.3s ease;
@@ -22,6 +22,10 @@
 
 }
 
+.navbar-wagon-white {
+  background-color: white;
+  opacity: 0.9;
+}
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
