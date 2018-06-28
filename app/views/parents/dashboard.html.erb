@@ -2,6 +2,7 @@
 <h1>Dashboard</h1>
   <div class=" center-dashboard">
     <div class="grid">
+      <%= link_to new_parent_incident_path(@parent) do %>
       <div class="block one ipad iphone">
         <div class="card-content">
           <div><%= image_tag 'add.svg', :class => "image" %></div>
@@ -9,6 +10,7 @@
           <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
         </div>
       </div>
+       <% end %>
       <div class="block two ipad iphone">
         <div class="card-content">
           <div><%= image_tag 'hist.svg', :class => "image" %></div>
