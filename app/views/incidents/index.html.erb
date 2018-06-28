@@ -1,1 +1,26 @@
-<h1>index</h1>
+
+<div class="container">
+
+<h1>Index</h1>
+  <div class="row">
+      <% @incidents.each do |incident| %>
+    <div class="col-xs-12 col-sm-4">
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://s-i.huffpost.com/gen/4394056/images/n-OCEANS-628x314.jpg');">
+        <div class="card-category"><%= incident.medication_name %></div>
+        <div class="card-description" style="height: 80%;">
+
+        <div style="height: 20%; overflow: scroll;">
+        	<% incident.side_effects.each do |side_effect| %>
+        <h2><%= side_effect.name  %></h2>
+        <% end %>
+        </div>
+
+        <p><%= incident.date_of_incident %></p>
+      </div>
+     </div>
+  </div>
+
+    <% end %>
+ </div>
+</div>

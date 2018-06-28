@@ -1,0 +1,79 @@
+
+.container{
+  margin-top: 60px;
+
+}
+
+h1 {
+  font-family: $headers-font;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+} 
+
+.card {
+  background-size: 300px 285px;
+  background-repeat: no-repeat;
+  margin-top:50px;
+  height: 325px;
+  width: 300px;
+  text-shadow: 3 3px 2px rgba(0,0,0,1);
+  background-color: white;
+  color: #999999;
+  position: relative;
+  border-radius:10px;
+  opacity: 0.9;
+  box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.card-category {
+  font-family: $headers-font;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-description {
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+}
+.card-description h2 {
+  font-family: $headers-font;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $green;
+}
+.card-description p {
+ font-family: $body-font; 
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+
