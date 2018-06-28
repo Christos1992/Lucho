@@ -2,6 +2,7 @@ class IncidentsController < ApplicationController
   before_action :find_id, only: [:show, :edit, :update, :destroy]
 
   def index
+    @parent = current_user.parent
     @incidents = Incident.all
   end
 

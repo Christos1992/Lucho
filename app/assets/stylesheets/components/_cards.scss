@@ -52,11 +52,19 @@ h1 {
 }
 .card-description h2 {
   font-family: $headers-font;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
-  text-transform: uppercase;
-  color: $green;
+  color: $yellow;
+  margin-top: 150px;
 }
+
+.card-description h3 {
+  font-family: $headers-font;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 180px;
+}
+
 .card-description p {
  font-family: $body-font; 
   font-size: 19px;
