@@ -1,7 +1,7 @@
 class IncidentsController < ApplicationController
   before_action :find_id, only: [:show, :edit, :update, :destroy]
 
-  def intex
+  def index
     @incidents = Incident.all
   end
 
