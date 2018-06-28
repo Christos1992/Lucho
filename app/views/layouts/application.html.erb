@@ -8,17 +8,17 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <!-- <link rel='stylesheet' href='fullcalendar.css' /> -->
 
   </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <!-- <script src='lib/moment.min.js'></script> -->
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <script src='lib/jquery.min.js'></script>
-    <script src='lib/moment.min.js'></script>
-    <script src='fullcalendar/fullcalendar.js'></script>
-  </body>
+    <!-- <script src='lib/jquery.min.js'></script> -->
+<!--     <script src='fullcalendar/fullcalendar.js'></script>
+ -->  </body>
 </html>
