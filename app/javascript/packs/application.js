@@ -6,7 +6,12 @@ initUpdateNavbarOnScroll();
 
 $(function() {
   $('#calendar').fullCalendar({
-    events: "/events"
+    events: "/events",
+    defaultView: 'month',
+    height: 'auto'
   });
 
 })
+
+
+

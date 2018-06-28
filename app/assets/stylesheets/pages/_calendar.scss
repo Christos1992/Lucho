@@ -48,3 +48,28 @@ background:rgba(255,255,255, 0.2);
 .fc-day-number {
   opacity:1;
 }
+
+.fc-content {
+  background:rgba(23,63,94, 0.7);
+  background-size: cover;
+  height: 100px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 6px;
+  margin: -3px;
+}
+
+.fc-time {
+  font-size: 15px;
+  font-weight: 300;
+
+}
+
+
+
+tr:first-child > td > .fc-day-grid-event {
+    margin-top: 2px;
+    background: transparent;
+    border: none;
+    }
