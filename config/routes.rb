@@ -9,12 +9,13 @@ resources :parents, only:[:new, :create, :edit, :show, :update, :destroy, :calen
   resources :children, only:[:new, :create, :edit, :update, :destroy, :show] do
     resources :child_medications, only:[:new, :create, :edit, :update, :destroy, :show]
   end
+
     resources :incidents do
       resources :side_effect_incidents do
         resources :side_effects
       end
     end
   end
-
+   get 'events', to: "incidents#events"
 
 end
