@@ -11,6 +11,8 @@
         </div>
       </div>
        <% end %>
+      <%= link_to parent_incidents_path(@parent) do %>
+
       <div class="block two ipad iphone">
         <div class="card-content">
           <div><%= image_tag 'hist.svg', :class => "image" %></div>
@@ -18,6 +20,7 @@
           <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
         </div>
       </div>
+      <% end %>
       <div class="block three ipad iphone">
         <div class="card-content">
           <div><%= image_tag '', :class => "image" %></div>

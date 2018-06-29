@@ -79,10 +79,10 @@ class IncidentsController < ApplicationController
       #   }
         inc.side_effects.each do |se|
          @incidents << {
-           title: se.name ,
-           start: inc.created_at,
-        end: inc.created_at,
-        color: 'red'
+           title: inc.medication_name ,
+           description: se.name + ": " + se.metric,
+           start: inc.date_of_incident,
+        end: inc.date_of_incident
 
          }
       end
