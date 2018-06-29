@@ -10,9 +10,10 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Incident", new_parent_incident_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Dashboard", parent_dashboard_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
+       <%= link_to "Incident", new_parent_incident_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Calendar", parent_calendar_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Dashboard", parent_dashboard_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
+
 
 
       <!-- Avatar with dropdown menu -->
