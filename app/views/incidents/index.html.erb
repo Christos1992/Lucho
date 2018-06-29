@@ -13,21 +13,20 @@
       <% @incidents.each do |incident| %>
     <div class="col-xs-12 col-sm-4">
 
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://dreamatico.com/data_images/sky/sky-3.jpg');">
+        <div class="card">
         <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
          <i class="fas fa-search-plus"></i>
         <% end %>
 
         <div class="card-category"><i class="fas fa-prescription-bottle-alt"></i> <%= incident.medication_name %> </div>
         <div class="card-description" style="height: 80%;">
-        <div style="height: 70%; overflow: scroll; text-align: center; position: absolute;">
+         <div style="height: 45%; margin-top: 30px;  overflow: scroll; text-align: center; position: absolute;">
         	<% incident.side_effect_incidents.each do |side_effect_incident| %>
           <%# side_effect_incident.side_effect.each do |side_effect|%>
         <h2><i class="fas fa-bolt"></i> <%= side_effect_incident.side_effect.name %> </h2>
 
         <%# end %>
         <% end %>
-        <h3><%= incident.description %></h3>
         </div>
         <p><i class="fas fa-calendar-alt"></i> <%= incident.date_of_incident %> </p>
       </div>
@@ -36,3 +35,6 @@
   <% end %>
  </div>
 </div>
+
+
+     
