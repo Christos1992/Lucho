@@ -3,7 +3,15 @@ class IncidentsController < ApplicationController
 
   def index
     @parent = current_user.parent
-    @incidents = Incident.all
+
+    if params[:query].present?
+       @incidents = @parent.incidents.search_by_medicaiton(params[:query])
+       if @incidents.empty?
+        @incidents = Incident.all
+      end
+    else
+      @incidents = Incident.all
+    end
   end
 
   def new
@@ -55,6 +63,22 @@ class IncidentsController < ApplicationController
   end
 
   def edit
+     @side_effect_incident = SideEffectIncident.new
+    @parent = current_user.parent
+    @allsideeffects = SideEffect.all
+
+    @side_effect_names = []
+    @allsideeffects.each do |sideeffect|
+      if !@side_effect_names.include? "#{sideeffect.name}"
+        @side_effect_names << sideeffect
+      end
+    end
+    @side_effect_names = @side_effect_names.uniq { |p| p.name }
+    @allmedications = current_user.parent.child.child_medications
+    @names =[]
+    @allmedications.each do |medication|
+      @names << medication.medication.name
+    end
   end
 
   def update
