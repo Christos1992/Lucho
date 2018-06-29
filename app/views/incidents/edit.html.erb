@@ -1,1 +1,31 @@
 <h1>edit</h1>
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
+    </div>
+  </div>
+<div id="side_effect_incidents">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Side:effects:</h3>
+      <% if @incident.side_effect_incidents.empty? %>
+        <p>Choose a side effect</p>
+      <% else %>
+        <ul class="list-group">
+          <% @incident.side_effect_incidents.each do |side_effect_incident| %>
+           <li id="side_effect_incident-<%= side_effect_incident.id%>"> <%= render 'side_effect_incidents/show', side_effect_incident: side_effect_incident, side_effect: side_effect_incident.side_effect%>
+             <%= link_to "Delete",  parent_incident_side_effect_incident_path(current_user.parent, @incident,side_effect_incident), method: :delete, remote: true %>
+          </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
