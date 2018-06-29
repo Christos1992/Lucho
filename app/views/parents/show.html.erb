@@ -15,9 +15,10 @@
 <div class="card-links-profiles-edit">
   <%= link_to "Edit", edit_parent_path(@parent) %> | <%= link_to "Go to Child's profile", parent_child_path(@parent, @parent.child) %>
   </div>
-  <form method="get" action="parent/dashboard">
-    <button id="btn-show" type="submit"><strong>Submit</strong></button>
-</form>
+
+<%= link_to parent_dashboard_path(current_user.parent) do %>
+    <button id="btn-show" class="home"><strong>Submit</strong></button>
+    <%end %>
 
 
 

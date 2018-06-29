@@ -1,5 +1,5 @@
 class ParentsController < ApplicationController
-
+skip_before_action :authenticate_parent!, only: [:new, :create]
 before_action  :find_id, only:[:show, :edit, :update, :destroy]
 
   def dashboard

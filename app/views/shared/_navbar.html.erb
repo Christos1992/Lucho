@@ -10,7 +10,11 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-
+    <% if current_user.parent.nil? %>
+ <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+    <% else %>
       <%= link_to "Profile", parent_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Add a Medication", new_parent_incident_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Dashboard", parent_dashboard_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
@@ -42,6 +46,7 @@
           </ul>
         </div>
       </div>
+    <% end %>
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
