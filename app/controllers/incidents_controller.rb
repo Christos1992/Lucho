@@ -37,7 +37,7 @@ class IncidentsController < ApplicationController
     @incident = Incident.new(incident_params)
     @incident.parent = Parent.find(current_user.parent.id)
     if @incident.save
-      redirect_to parent_incident_path(current_user.parent,@incident)
+      redirect_to edit_parent_incident_path(current_user.parent,@incident)
     else
       render 'new'
     end
