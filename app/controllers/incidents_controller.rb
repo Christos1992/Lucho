@@ -64,7 +64,7 @@ class IncidentsController < ApplicationController
 
   def destroy
     @incident.destroy
-    redirect_to incidents_path
+    redirect_to parent_incidents_path(current_user.parent)
   end
 
   def events

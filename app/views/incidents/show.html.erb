@@ -1,38 +1,23 @@
-<h1>show</h1>
-
-
-
-
-
-
-
-
-  <div class="row">
-    <div class="col-xs-12">
-      <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
+<div class="container-profiles">
+<h1>Details</h1>
+  <div class="card-all-profiles">
+    <div class="card-info">
+      <h4>Medication: <%= @incident.medication_name %></h4>
+      <h4>Date Medication received: <%= @incident.date_medication_received %></h4>
+      <h4>Dose: <%= @incident.dose %></h4>
+      <h4>Date of incicident: <%= @incident.date_of_incident %></h4>
+      <h4>Period: <%= @incident.period %></h4>
+      <% @incident.side_effect_incidents.each do |side_effect_incident| %>
+      <h4>Side Effect:</h4> <li><%= side_effect_incident.side_effect.name  %></li>
+      <h4>Side Effect Metric:</h4> <li><%= side_effect_incident.side_effect.metric %></li>
+        <% end %>
+      <h4>Description: <%= @incident.description%></h4>
     </div>
   </div>
-<div id="side_effect_incidents">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Side:effects:</h3>
-      <% if @incident.side_effect_incidents.empty? %>
-        <p>Choose a side effect</p>
-      <% else %>
-        <ul class="list-group">
-          <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-           <li id="side_effect_incident-<%= side_effect_incident.id%>"> <%= render 'side_effect_incidents/show', side_effect_incident: side_effect_incident, side_effect: side_effect_incident.side_effect%>
-             <%= link_to "Delete",  parent_incident_side_effect_incident_path(current_user.parent, @incident,side_effect_incident), method: :delete, remote: true %>
-          </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+  <div class="card-links-profiles-edit">
+    <%= link_to "Edit", edit_parent_incident_path(current_user.parent, @incident) %> | <%= link_to "Delete", parent_incident_path(current_user.parent, @incident), method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
+
+<div style="height: 200px;">
 </div>
-
-
-
-<%= link_to edit_parent_incident_path(current_user.parent, @incident) do %>
-<button class="home">Got to edit</button>
-<% end %>
+</div>
