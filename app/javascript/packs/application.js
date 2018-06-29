@@ -12,7 +12,8 @@ $(function() {
     agenda: {
       eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
     }
-  }
+  },
+   timeFormat: ' '
 
   });
 
