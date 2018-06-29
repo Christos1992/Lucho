@@ -10,6 +10,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+
+      <%= link_to "Profile", parent_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Incident", new_parent_incident_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Dashboard", parent_dashboard_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Calendar", parent_calendar_path(current_user.parent), class: "navbar-wagon-item navbar-wagon-link" %>
@@ -21,7 +23,9 @@
           <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAOV9dS8sjfel0Sb3eMpoHTWzL0kotctriKuBWf1YqcLWmfauB", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to parent_path(current_user.parent, @child) do %>
+
+              <%= link_to parent_path(current_user.parent) do %>
+
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
               <% end %>
             </li>
