@@ -63,7 +63,7 @@ class IncidentsController < ApplicationController
   end
 
   def edit
-     @side_effect_incident = SideEffectIncident.new
+    @side_effect_incident = SideEffectIncident.new
     @parent = current_user.parent
     @allsideeffects = SideEffect.all
 
@@ -82,8 +82,8 @@ class IncidentsController < ApplicationController
   end
 
   def update
-    @incident.update(incidents_params)
-    redirect_to incident_path(@incident)
+    @incident.update(incident_params)
+    redirect_to parent_incident_path(current_user.parent,@incident)
   end
 
   def destroy

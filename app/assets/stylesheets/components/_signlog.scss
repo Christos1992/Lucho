@@ -45,6 +45,10 @@ background-color: rgb(36, 66, 97);
 background-color: rgb(36, 66, 97);
   padding: 5px;
   //height: 1400px;
+  color: white;
+  h3 {
+    color: white;
+  }
 }
 .card-info {
   color: white;
@@ -119,4 +123,18 @@ background-color: rgb(36, 66, 97);
 
 a {
   color: #E8B55A;
+}
+
+.list-group {
+  color: white;
+}
+
+.side_effect_incidents {
+  color: white;
+}
+
+.btn-editside:hover{
+   border: 1px solid red;
+
+
 }
