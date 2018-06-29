@@ -6,7 +6,14 @@ initUpdateNavbarOnScroll();
 
 $(function() {
   $('#calendar').fullCalendar({
-    events: "/events"
+    events: "/events",
+     eventLimit: true, // for all non-agenda views
+  views: {
+    agenda: {
+      eventLimit: 6 // adjust to 6 only for agendaWeek/agendaDay
+    }
+  },
+   timeFormat: ' '
 
   });
 
