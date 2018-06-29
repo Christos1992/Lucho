@@ -17,7 +17,7 @@
 }
 
 .center-calendar{
-  margin: 0 auto;
+  margin: 20px auto;
   width: 84%;
   height: 70%;
   background-color: transparent;
@@ -50,14 +50,16 @@ background:rgba(255,255,255, 0.2);
 }
 
 .fc-content {
-  background:rgba(23,63,94, 0.7);
+  background: rgba(23, 63, 94, 0.7);
   background-size: cover;
-  height: 100px;
-  border-radius: 5px;
-  font-size: 15px;
+  height: 100vh;
+  border-radius: 0px;
+  font-size: 1vw;
   font-weight: 300;
   padding: 6px;
   margin: -3px;
+  word-break: break-all;
+  margin-top: -31px;
 }
 
 .fc-time {
@@ -65,11 +67,17 @@ background:rgba(255,255,255, 0.2);
   font-weight: 300;
 
 }
-
-
+.fc-day-number {
+    padding: 2px;
+    z-index: 0;
+}
 
 tr:first-child > td > .fc-day-grid-event {
     margin-top: 2px;
     background: transparent;
     border: none;
     }
+
+.fc-day.fc-widget-content.fc-sun.fc-other-month.fc-past{
+
+}

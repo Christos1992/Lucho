@@ -1,9 +1,15 @@
 
 <div class="container">
+  <div class="searchbb">
+     <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
+        <%= form.text_field :query, placeholder: "Find a Medication" %>
+        <%= form.submit 'Search', id:"buttonhome" %>
+        <% end %>
+    </div>
 
-<h1>Index</h1>
+<h1>All your <strong> Medications</strong></h1>
   <div class="row">
-   
+
       <% @incidents.each do |incident| %>
     <div class="col-xs-12 col-sm-4">
 
@@ -11,7 +17,7 @@
         <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
          <i class="fas fa-search-plus"></i>
         <% end %>
-         
+
         <div class="card-category"><i class="fas fa-prescription-bottle-alt"></i> <%= incident.medication_name %> </div>
         <div class="card-description" style="height: 80%;">
         <div style="height: 70%; overflow: scroll; text-align: center; position: absolute;">

@@ -9,7 +9,8 @@
     <%= f.input :first_name, required: true, autofocus: true %>
     <%= f.input :last_name, required: true, autofocus: true %>
     <%= f.input :gender, required: true, autofocus: true %>
-    <%= f.input :date_of_birth, required: true, autofocus: true, wrapper_html: { class: 'datepicker'}%>
+    <%= f.input :date_of_birth, :start_year => 1910, :end_year => 2010,
+        :order => [:day, :month, :year], required: true, autofocus: true, wrapper_html: { class: 'datepicker'}%>
     <%= f.input :working_status, required: true, autofocus: true %>
     <%= f.input :civil_status, required: true, autofocus: true %>
     <%= f.input :hobbies, required: true, autofocus: true %>

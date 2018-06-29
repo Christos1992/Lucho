@@ -1,4 +1,3 @@
-
 .banner {
   background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.2) 50%), url('home.jpg');
   background-size: cover;
@@ -8,11 +7,7 @@
   justify-content: center;
   position:relative;
   flex-direction: column;
-
-
-
  }
-
 
 .banner h1 {
   text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
@@ -22,10 +17,6 @@
   top: 250px;
   color: white;
 }
-
-
-
-
 
 button.home {
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
@@ -42,15 +33,14 @@ button.home {
   transition:800ms ease all;
   outline:none;
   font-weight: 300;
-
-
-
 }
+
 button.home:hover{
   background:none;
   color:$luchoblue;
   font-size: thin;
 }
+
 button.home:before,button.home:after{
   content:'';
   position:absolute;
@@ -61,15 +51,15 @@ button.home:before,button.home:after{
   background: #173F5E;
   transition:400ms ease all;
 }
+
 button.home:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
+
 button.home:hover:before,button:hover:after{
   width:100%;
   transition:800ms ease all;
 }
-
-

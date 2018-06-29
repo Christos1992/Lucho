@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -27,10 +27,42 @@ SideEffect.create!(name: "Fatigue", metric:"Severe - In bed more than hald of th
 SideEffect.create!(name: "Skin Irritation ", metric:" Mild - Faint redness and scaling")
 SideEffect.create!(name: "Skin Irritation ", metric:"Moderate - Redness or moist peeling especially at skin folds")
 SideEffect.create!(name: "Skin Irritation ", metric: " Severe -Swelling and moist peeling in large area or ulcer in skin")
-# SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
+SideEffect.create!(name: "Nausea", metric: "Mild -Can eat")
+SideEffect.create!(name: "Nausea", metric: "Moderate - Eating/drinking less than normal")
+SideEffect.create!(name: "Nausea", metric: "Severe - Cant eat or drink")
+SideEffect.create!(name: "Fever, Chills", metric: "Mild - Fever 37°C to 38°C")
+SideEffect.create!(name: "Fever, Chills", metric: "moderate - Fever 38°C-40°C")
+SideEffect.create!(name: "Fever, Chills", metric: "Severe -Fever greater than 40°C")
+SideEffect.create!(name: "Vomiting", metric: "Mild - Vomited once during the day")
+SideEffect.create!(name: "Vomiting", metric: "Modarate - Vomited 2 to 5 times during the day")
+SideEffect.create!(name: "Vomiting", metric: "Severe - Vomited 6 or more times during the
+day")
+SideEffect.create!(name: "Sore Mouth", metric: "Mild-Soreness or painless ulcer*")
+SideEffect.create!(name: "Sore Mouth", metric: "Moderate–Soreness of painful ulcer but can
+eat")
+SideEffect.create!(name: "Sore Mouth", metric: "Severe-Painful ulcer and cannot eat")
+SideEffect.create!(name: "Constipation", metric: "Mild - No bowel movement for 2 days")
+SideEffect.create!(name: "Constipation", metric: "Moderate - No bowel movement for 3 to 4 days")
+SideEffect.create!(name: "Constipation", metric: "Severe - No bowel movement for more than 4
+days or swollen abdomen")
+SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Mild – Slightly decreased appetite")
+SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Moderate – Usually not hungry")
+SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Severe – Nothing looks good/unable to eat")
+SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Mild - Pain but can eat")
+SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Moderate - Pain requiring soft or liquid diet")
+SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Severe - Unable to eat at all")
+SideEffect.create!(name: "Swelling (Edema) in Hands or Feet", metric: "Mild – Swelling in hands or feet")
+SideEffect.create!(name: "Swelling (Edema) in Hands or Feet", metric: "Moderate – Swelling extending up arm or leg")
+SideEffect.create!(name: "Swelling (Edema) in Hands or Feet", metric: "Severe – Swelling with pain or trouble
+breathing")
 
-# #Chemotherapy Side Effects
-# SideEffect.create!(name: "Fever, Chills", mild: "Fever 37°C to 38°C", moderate: "Fever 38°C-40°C", severe: "Fever greater than 40°C")
-# SideEffect.create!(name: "Fatigue", mild: "Normal activity with effort", moderate: "In bed less than half of day", severe: "In bed more than hald of the day")
-# SideEffect.create!(name: "Nausea", mild: "Can eat", moderate: "Eating/drinking less than normal", severe: "Cant eat or drink")
+
+
+
+
+
+
+
+
+
 

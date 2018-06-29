@@ -3,11 +3,11 @@
 
 <% if user_signed_in? %>
 <%= link_to parent_dashboard_path(current_user.parent) do %>
-    <button class="home">Discover It</button>
+    <button class="home">Discover</button>
     <%end %>
     <% else %>
     <%= link_to user_session_path do%>
-    <button class="home">Discover It</button>
+    <button class="home">Discover</button>
     <%end %>
 
   <% end %>
