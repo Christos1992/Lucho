@@ -1,36 +1,33 @@
-<div class="wrapper-index">
-<div class="container">
-  <div class="searchbb">
+<div class="wrapper-card">
+  <div class="container-card">
+    <div class="searchbb">
      <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
-        <%= form.text_field :query, placeholder: "Find a Medication" %>
-        <%= form.submit 'Search', id:"buttonhome" %>
-        <% end %>
-    </div>
+     <%= form.text_field :query, placeholder: "Find a Medication" %>
+     <%= form.submit 'Search', id:"buttonhome" %>
+     <% end %>
+   </div>
 
-<h1>All your <strong> Medications</strong></h1>
-  <div class="row">
+   <h1>All your <strong> Medications</strong></h1>
+   <div class="row">
 
-      <% @incidents.each do |incident| %>
+    <% @incidents.each do |incident| %>
     <div class="col-xs-12 col-sm-4">
 
-        <div class="card">
-                  <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
-                   <i class="fas fa-search-plus"></i> 
-                  <% end %>
+      <div class="card-incident">
+        <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
+        <i class="fas fa-search-plus"></i> 
+        <% end %>
 
-                  <div class="card-category"> <%= incident.medication_name %> </div>
-                  <div class="card-description" style="height: 50px; overflow: auto; text-align: center; position: absolute; top: 40px;" >
-
-                  	<% incident.side_effect_incidents.each do |side_effect_incident| %>
-                      <h2><i class="fas fa-bolt"></i> <%= side_effect_incident.side_effect.name %> </h2>
-                    <% end %>
-           
-                </div>
-                <p style='position:absolute; bottom: 1px;'><i class="fas fa-calendar-alt"></i> <%= incident.date_of_incident %> </p>
-               </div>
-              </div>
-            <% end %>
- </div>
+        <div class="card-category"> <%= incident.medication_name %> </div>
+        <div class="card-description">
+          <% incident.side_effect_incidents.each do |side_effect_incident| %>
+          <p><i class="fas fa-bolt"></i> <%= side_effect_incident.side_effect.name%> </p>
+          <% end %>
+        </div>
+        <p style='position:absolute; bottom: 5px; left: 10px;'><i class="fas fa-calendar-alt"></i> <%= incident.date_of_incident %> </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
 </div>    
-<%#= incident.side_effect_incidents.count %>
