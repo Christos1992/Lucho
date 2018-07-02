@@ -10,10 +10,37 @@
   flex: 1 1 auto;
   max-width: 80vw;
   min-width: 70vw;
+
 }
 .container-logsign {
   background: radial-gradient(#0f3150 0,#002 66%);
   flex: 0 0 30%;
+
+}
+.main-container-incident {
+  margin-top: 3.5em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    //flex-wrap: wrap;
+  }
+
+.container-incident-image {
+  background-image: url('lucho1.png');
+  background-size: cover;
+  background-color: white;
+  width: 100%;
+  min-height:200px;
+
+  // min-height: calc(100vh - 75px);
+
+
+
+
+}
+.container-incident {
+  background: radial-gradient(#0f3150 0,#002 66%);
+
 
 }
 
@@ -245,11 +272,12 @@ font-weight: 300;
     flex-direction: column;
      padding: 5px;
   //height: 1400px;
-  //color: white;
+  color: white;
   h3 {
     color: white;
+
   }
-  }
+}
 
 .card-effects{
   display: flex;
