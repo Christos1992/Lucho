@@ -3,16 +3,21 @@
 <h1>Details</h1>
   <div class="card-all-profiles">
     <div class="card-info">
-      <h4>Medication: <%= @incident.medication_name %></h4>
-      <h4>Date Medication received: <%= @incident.date_medication_received %></h4>
-      <h4>Dose: <%= @incident.dose %></h4>
-      <h4>Date of incicident: <%= @incident.date_of_incident %></h4>
-      <h4>Period: <%= @incident.period %></h4>
-      <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-      <h4>Side Effect </h4><li><%= "#{side_effect_incident.side_effect.name}: #{side_effect_incident.side_effect.metric}"%></li>
-      <!-- <h4>Side Effect Metric:</h4> <li><%= side_effect_incident.side_effect.metric %></li> -->
-        <% end %>
-      <h4>Description: <%= @incident.description%></h4>
+
+      <p id ="info">Medication: <span id="userinput"> <%= @incident.medication_name %> </span></p>
+      <p id ="info">Date Medication received: <span id="userinput"> <%= @incident.date_medication_received %> </span></p>
+      <p id ="info">Dose: <span id="userinput">  <%= @incident.dose %> </span></p>
+      <p id ="info">Date of incicident:<span id="userinput">  <%= @incident.date_of_incident %></span></p>
+      <p id ="info">Period: <span id="userinput">  <%= @incident.period %> </span></p>
+ 
+       <p id ="info">Side Effect: </p>
+          <% @incident.side_effect_incidents.each do |side_effect_incident| %>
+           <p id="sideffect"><%= "#{side_effect_incident.side_effect.name}:"%>   <span
+            id="userinput"><%= "#{side_effect_incident.side_effect.metric}"%></span></p>
+          <% end %>
+
+      <p id ="info">Description: <span id="userinput"> <%= @incident.description%> </span></p>
+
     </div>
   </div>
   <div class="card-links-profiles-edit">
