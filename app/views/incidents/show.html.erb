@@ -1,4 +1,4 @@
-
+<div class="main-container-signin">
 <div class="container-profiles">
 <h1>Details</h1>
   <div class="card-all-profiles">
@@ -9,7 +9,7 @@
       <p id ="info">Dose: <span id="userinput">  <%= @incident.dose %> </span></p>
       <p id ="info">Date of incicident:<span id="userinput">  <%= @incident.date_of_incident %></span></p>
       <p id ="info">Period: <span id="userinput">  <%= @incident.period %> </span></p>
- 
+
        <p id ="info">Side Effect: </p>
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
            <p id="sideffect"><%= "#{side_effect_incident.side_effect.name}:"%>   <span
@@ -30,3 +30,6 @@
 <div style="height: 200px;">
 </div>
 	</div>
+  <div class= container-login-image></div>
+</div>
+
