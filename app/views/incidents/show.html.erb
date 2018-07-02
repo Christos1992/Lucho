@@ -3,6 +3,7 @@
 <h1>Details</h1>
   <div class="card-all-profiles">
     <div class="card-info">
+
       <p id ="info">Medication: <span id="userinput"> <%= @incident.medication_name %> </span></p>
       <p id ="info">Date Medication received: <span id="userinput"> <%= @incident.date_medication_received %> </span></p>
       <p id ="info">Dose: <span id="userinput">  <%= @incident.dose %> </span></p>
@@ -16,13 +17,16 @@
           <% end %>
 
       <p id ="info">Description: <span id="userinput"> <%= @incident.description%> </span></p>
+
     </div>
   </div>
   <div class="card-links-profiles-edit">
     <%= link_to "edit", edit_parent_incident_path(current_user.parent, @incident) %> | <%= link_to "Delete", parent_incident_path(current_user.parent, @incident), method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
-
+<%= link_to parent_dashboard_path(current_user.parent) do %>
+    <button class="home"><strong>Back to dashboard</strong></button>
+    <%end %>
 <div style="height: 200px;">
 </div>
 	</div>

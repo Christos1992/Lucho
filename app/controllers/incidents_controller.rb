@@ -105,6 +105,7 @@ class IncidentsController < ApplicationController
          @incidents << {
            title: inc.medication_name ,
            description: se.name + ": " + se.metric,
+           id: parent_incident_path(current_user.parent, inc.id),
            start: inc.date_of_incident,
         end: inc.date_of_incident
 
