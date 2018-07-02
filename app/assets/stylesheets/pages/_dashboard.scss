@@ -1,5 +1,5 @@
 .wrapper-dashboard {
-background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.3) 20%), url('home.jpg');
+background-image: radial-gradient(#0f3150 0,#002 66%);
 background-size: cover;
 padding: 40px 50px;
 min-height: calc(100vh - 75px);
@@ -9,7 +9,7 @@ min-height: calc(100vh - 75px);
   text-align: center;
   margin-bottom:40px;
   font-weight: 200;
-  color:$luchoblue;
+  color: white;
 
 
 }
@@ -19,7 +19,6 @@ min-height: calc(100vh - 75px);
   width: 70%;
   height:80%;
 }
-
 .card-content{
   position:relative;
   bottom: -2px;
@@ -46,6 +45,8 @@ min-height: calc(100vh - 75px);
 .grid a:hover {
   text-decoration: none;
   background:rgba(27,56,81, 0.9);
+  border-radius: 16px;
+
 }
 
 .card-content h2 p {
@@ -57,6 +58,8 @@ min-height: calc(100vh - 75px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
   font-weight: 200;
 
 }
@@ -64,7 +67,8 @@ min-height: calc(100vh - 75px);
 .block.one {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-  background-color: rgba(30,60,86, 0.8);
+  background-color: rgba(255,255,255,.05);
+  border-radius: 16px;
 
 
 }
@@ -72,14 +76,16 @@ min-height: calc(100vh - 75px);
 .block.two {
   grid-column: 2 / span 2;
   grid-row: 1 / span 1;
-  background-color: rgba(27,56,81, 0.8);
+  background-color: rgba(255,255,255,.05);
+  border-radius: 16px;
 
 }
 
 .block.three {
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-  background-color: rgba(26,54,76, 0.8);
+  background-color: rgba(255,255,255,.05);
+  border-radius: 16px;
 
 }
 
@@ -87,7 +93,8 @@ min-height: calc(100vh - 75px);
 
   grid-column: 2 / span 2;
   grid-row: 2 / span 2;
-  background-color: rgba(20,50,67, 0.8);
+  background-color: rgba(255,255,255,.05);
+  border-radius: 16px;
 }
 
       @media(max-width: 1024px) {
