@@ -44,6 +44,34 @@
 
 }
 
+.main-container-incident {
+  margin-top:3.5em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    //flex-wrap: wrap;
+  }
+
+.container-incident-image {
+  background-image: url('lucho1.png');
+  background-size: cover;
+  background-color: white;
+  width: 100%;
+  min-height:200px;
+
+  // min-height: calc(100vh - 75px);
+
+
+
+
+}
+.container-incident {
+  background: radial-gradient(#0f3150 0,#002 66%);
+
+
+}
+
+
 .nocolmargin {
   margin: 0px;
 }
@@ -190,7 +218,14 @@ a {
 
 
 
-
+#btn-new {
+  background-color: $luchoyellow;
+  color: $luchoblue;
+  border-radius: 5px;
+  border: white 2px solid;
+  margin-top: 10px;
+  //width: 305px;
+}
 
 @media(max-width: 460px) {
 .main-container-signin {
@@ -272,12 +307,14 @@ font-weight: 300;
     flex-direction: column;
      padding: 5px;
   //height: 1400px;
+
   color: white;
   h3 {
     color: white;
 
   }
 }
+
 
 .card-effects{
   display: flex;
@@ -326,7 +363,8 @@ flex-direction: column;
   //margin-top: 10px;
   width: 100px;
   background-color: green;
-  color: white
+  color: white;
+
 }
 
 #btn-child {
@@ -364,8 +402,8 @@ flex-direction: column;
 
 .card-btn-sideffects {
   display: flex;
-align-items: center;
-flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 
 #password-request {
@@ -393,4 +431,26 @@ a {
 #select_side_effect {
   color: black;
 }
+}
+
+#new_side_effect_incident {
+   display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#seff {
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-text {
+
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      color: white;
+    }
 }
