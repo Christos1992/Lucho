@@ -1,8 +1,9 @@
 .banner {
-  background-image:url('fb-13.jpg');
+  background-image:linear-gradient(-225deg, rgba(62, 60, 59, 0.4) 29%, rgba(62, 60, 59, 0.3) 66%), url("fb-13.jpg");
   background-size: cover;
   height: calc(100vh - 75px);
   display: flex;
+  height: 100vh;
 
   //align-items: center;
   // justify-content: center;
@@ -10,7 +11,7 @@
   // flex-direction: column;
  }
 
-.card-landing {
+.cardlanding {
    // display: flex;
 
 
@@ -40,7 +41,7 @@
 
 
 }
-.card-buttonhome {
+.cardbuttonhome {
   position:relative;
   align-items: center;
   justify-content: center;
