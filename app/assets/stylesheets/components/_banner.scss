@@ -1,55 +1,100 @@
 .banner {
-  background-image: radial-gradient(#0f3150 0,#002 66%), url('home.jpg');
+  background-image:url('fb-13.jpg');
   background-size: cover;
   height: calc(100vh - 75px);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position:relative;
-  flex-direction: column;
+
+  //align-items: center;
+  // justify-content: center;
+  // position:relative;
+  // flex-direction: column;
  }
 
-.banner h1 {
+.card-landing {
+   // display: flex;
+
+
+  margin-left: 5%;
+  position:relative;
+  align-items: center;
+  justify-content: center;
   text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
   font-size: 45px;
   font-weight: 300;
   position: absolute;
+  margin-top: 12%;
   top: 250px;
-  color: white;
+
+
+  h1 {
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin-top: 5%;
+    color: white;
+    font-size: 22px;
+  }
+
+
+}
+.card-buttonhome {
+  position:relative;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+
 }
 
+
 button.home {
+
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  margin-top:30px;
+  margin-top:20px;
   background:$luchoblue;
   color:white;
   font-size: thin;
   border:none;
-  position:relative;
+  //position:relative;
   height:50px;
-  font-size:1.6em;
+  font-size:0.6em;
   padding:0 1em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
-  font-weight: 300;
+  font-weight: 400;
+  width: 300px;
+  border-radius: 5px;
+
+}
+
+button.home {
+ //background:rgb(142, 194, 191);
+ background:$luchoyellow;
+ color: $luchoblue;
+ margin-left: 7%;
 }
 
 button.home:hover{
-  background:none;
-  color:$luchoblue;
+  background: $luchoyellow;
+  //color:rgb(142, 194, 191);
   font-size: thin;
+  background-color: #E8B5FF;
+
 }
 
 button.home:before,button.home:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #173F5E;
-  transition:400ms ease all;
+
+  // content:'';
+
+  // top:0;
+  // right:0;
+  // height:4px;
+  // width:0;
+  // background: #173F5E;
+  // transition:400ms ease all;
 }
 
 button.home:after{
