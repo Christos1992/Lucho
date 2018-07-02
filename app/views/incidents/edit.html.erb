@@ -1,8 +1,8 @@
 
 <div class="container-logsign">
 <h2>Edit</h2>
-<div class="card-all-info-children">
-  <div><h3>Select Side Effects</h3></div>
+<div class="card-all-info-incidents">
+  <div><h4>Select Side Effects</h4></div>
    <div class="row">
     <div class="col-xs-12">
       <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
@@ -27,7 +27,7 @@
     </div>
   </div>
 </div>
-</div>
+
 <div class="card-info">
   <%= simple_form_for [@parent, @incident] do |f| %>
   <div class="form-inputs">
@@ -44,11 +44,12 @@
  <%= f.input :description, placeholder: "What's about the incident?" %>
 </div>
 
-
+<div class="card-btn-sideffects">
 <div class="form-actions">
     <%= f.button :submit, "Continue", id: "btn-sideffects"  %>
   </div>
 <% end %>
+</div>
 <div style="height: 70px;"></div>
   </div>
 <div style="height: 70px;"></div>
