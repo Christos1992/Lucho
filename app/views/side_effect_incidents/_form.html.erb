@@ -7,8 +7,10 @@
    <%= form.input "side_effect_id", as: :select, collection: SideEffect.where(name: side_effect_name.name).map{ |se|  [se.metric, se.id]} , placeholder: 'What were the side effects?', wrapper_html: { class: 'hide-this', id: "metric-#{side_effect_name.name}" }%>
   <% end %>
   </div>
-  <%= form.button :submit , id: "btn-editinstance" %>
+  <div class="">
+  <%= form.button :submit , id: "btn-new" %>
 <% end %>
+</div>
 <script type="text/javascript">
   document.querySelectorAll('.hide-this').forEach( el =>  el.disabled = true )
   let currentSelection = document.getElementById('select_side_effect');
