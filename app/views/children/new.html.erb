@@ -11,7 +11,7 @@
     <%= f.input :gender, required: true, autofocus: true %>
     <%= f.input :date_of_birth, :start_year => 1910, :end_year => 2018,
         :order => [:day, :month, :year], required: true, autofocus: true, wrapper_html: { class: 'datepicker'}%>
-    <%= f.input :type_of_cancer, required: true, autofocus: true %>
+    <%= f.input :type_of_cancer, collection: ["Leukemia","Osteosarcoma","Lymphoma","Neuroblastoma","Sarcomas"],required: true, autofocus: true %>
     <%= f.input :stage_of_cancer, required: true, autofocus: true, placeholder:  "(1 to 5) 1: earliest stage, 5: maturest stage" %>
 
     <%= f.input :first_time_patient, required: true, autofocus: true %>
@@ -37,3 +37,5 @@
   </div>
 
 </div>
+
+Leukemia,Osteosarcoma,Lymphoma,Neuroblastoma,Sarcomas
