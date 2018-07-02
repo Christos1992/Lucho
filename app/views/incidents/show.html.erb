@@ -9,8 +9,8 @@
       <h4>Date of incicident: <%= @incident.date_of_incident %></h4>
       <h4>Period: <%= @incident.period %></h4>
       <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-      <h4>Side Effect:</h4> <li><%= side_effect_incident.side_effect.name  %></li>
-      <h4>Side Effect Metric:</h4> <li><%= side_effect_incident.side_effect.metric %></li>
+      <h4>Side Effect </h4><li><%= "#{side_effect_incident.side_effect.name}: #{side_effect_incident.side_effect.metric}"%></li>
+      <!-- <h4>Side Effect Metric:</h4> <li><%= side_effect_incident.side_effect.metric %></li> -->
         <% end %>
       <h4>Description: <%= @incident.description%></h4>
     </div>
@@ -19,7 +19,9 @@
     <%= link_to "edit", edit_parent_incident_path(current_user.parent, @incident) %> | <%= link_to "Delete", parent_incident_path(current_user.parent, @incident), method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
-
+<%= link_to parent_dashboard_path(current_user.parent) do %>
+    <button class="home"><strong>Back to dashboard</strong></button>
+    <%end %>
 <div style="height: 200px;">
 </div>
 	</div>

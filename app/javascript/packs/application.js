@@ -9,19 +9,25 @@ $(function() {
     // events: "/events",
     eventSources:[
     {
-      url: "/events",
-      data: {
-        custom_param1: 'metric'
-      },
-       description: "heloooo"
+      url: "/events"
     }],
-     eventLimit: true, // for all non-agenda views
+     eventLimit: true,
   views: {
     agenda: {
-      eventLimit: 3 // adjust to 6 only for agendaWeek/agendaDay
+      eventLimit: 3
     }
   },
    timeFormat: ' ',
+
+    eventClick:  function(event, jsEvent, view) {
+        console.log(event.id);
+
+           document.querySelector(".modal-footer a").setAttribute( 'href', event.id)
+            $('#modalTitle').html(event.title);
+            $('#modalBody').html(event.description);
+            $('#eventUrl').attr('href',event.url);
+            $('#fullCalModal').modal();
+        },
    events: [
   {
     title: 'Fake link for a Medication took',
@@ -40,7 +46,12 @@ $(function() {
 
     eventRender: function(event, element) {
             element.find('.fc-title').append("<br/>" + event.description);
+
+
         }
+    // eventRender: function(event, element) {
+    //         element.find('.fc-title').append("<br/>" + event.description);
+    //     }
   });
 
 })

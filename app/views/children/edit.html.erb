@@ -10,7 +10,7 @@
     <%= f.input :last_name, required: true, autofocus: true %>
     <%= f.input :gender, required: true, autofocus: true %>
     <%= f.input :date_of_birth, required: true, autofocus: true%>
-    <%= f.input :type_of_cancer, required: true, autofocus: true %>
+    <%= f.input :type_of_cancer, collection: ["Leukemia","Osteosarcoma","Lymphoma","Neuroblastoma","Sarcomas"],required: true, autofocus: true %>
     <%= f.input :stage_of_cancer, required: true, autofocus: true %>(1 to 5) 1: earliest stage, 5: maturest stage)
 
     <%= f.input :first_time_patient, required: true, autofocus: true %>
