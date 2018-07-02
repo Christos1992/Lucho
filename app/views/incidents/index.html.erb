@@ -1,4 +1,4 @@
-<div class="wrapper-dashboard">
+<div class="wrapper-index">
 <div class="container">
   <div class="searchbb">
      <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
@@ -14,25 +14,23 @@
     <div class="col-xs-12 col-sm-4">
 
         <div class="card">
-        <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
-         <i class="fas fa-search-plus"></i> 
-        <% end %>
+                  <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
+                   <i class="fas fa-search-plus"></i> 
+                  <% end %>
 
-        <div class="card-category"><%= incident.medication_name %> </div>
-        <div class="card-description" style="height: 80%;">
-         <div style="height: 45%; margin-top: 30px;  overflow: auto; text-align: center; position: absolute;">
-        	<% incident.side_effect_incidents.each do |side_effect_incident| %>
-          <%# side_effect_incident.side_effect.each do |side_effect|%>
-        <h2><i class="fas fa-bolt"></i> <%= side_effect_incident.side_effect.name %> </h2>
+                  <div class="card-category"> <%= incident.medication_name %> </div>
+                  <div class="card-description" style="height: 50px; overflow: auto; text-align: center; position: absolute; top: 40px;" >
 
-        <%# end %>
-        <% end %>
-        </div>
-        <p><i class="fas fa-calendar-alt"></i> <%= incident.date_of_incident %> </p>
-      </div>
-     </div>
-    </div>
-  <% end %>
+                  	<% incident.side_effect_incidents.each do |side_effect_incident| %>
+                      <h2><i class="fas fa-bolt"></i> <%= side_effect_incident.side_effect.name %> </h2>
+                    <% end %>
+           
+                </div>
+                <p style='position:absolute; bottom: 1px;'><i class="fas fa-calendar-alt"></i> <%= incident.date_of_incident %> </p>
+               </div>
+              </div>
+            <% end %>
  </div>
 </div>
-</div>
+</div>    
+<%#= incident.side_effect_incidents.count %>
