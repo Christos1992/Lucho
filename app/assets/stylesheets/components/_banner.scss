@@ -59,7 +59,7 @@ button.home {
   border:none;
   //position:relative;
   height:50px;
-  font-size:0.6em;
+  font-size:20px;
   padding:0 1em;
   cursor:pointer;
   transition:800ms ease all;
@@ -74,7 +74,6 @@ button.home {
  //background:rgb(142, 194, 191);
  background:$luchoyellow;
  color: $luchoblue;
- margin-left: 7%;
 }
 
 button.home:hover{
