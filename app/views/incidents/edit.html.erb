@@ -1,4 +1,5 @@
 <div class="main-container-incident">
+
   <div class="container-incident">
     <h2>Edit</h2>
     <div><h4>Select Side Effects</h4></div>
@@ -9,14 +10,11 @@
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
           <!-- <li id="side_effect_incident-<%= side_effect_incident.id%>"> -->
             <%= render 'side_effect_incidents/show', side_effect_incident: side_effect_incident, side_effect: side_effect_incident.side_effect%>
-
          <!--  </li> -->
       <!--   </ul> -->
-
         <% end %>
       <!-- </div> -->
     </div>
-
     <div class="card-info">
       <%= simple_form_for [@parent, @incident] do |f| %>
       <div class="form-inputs">
@@ -42,9 +40,6 @@
       <div style= "height: 50px"></div>
     </div>
   </div>
-
-
   <div class= "container-incident-image"></div>
-
 </div>
 
