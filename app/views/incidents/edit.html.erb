@@ -1,19 +1,16 @@
 <div class="main-container-incident">
 <div class="container-incident">
-<h2>Edit</h2>
+<div class="card-butto">
+<h4>Edit</h4>
+</div>
 <div class="card-h4">
 <h4>Select Side Effects</h4>
 </div>
 
-   <div class="row">
-    <div class="col-xs-12">
+
       <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
-    </div>
-  </div>
 
 <div id="side_effect_incidents">
-  <div class="row">
-    <div class="col-xs-12">
 
 <div id="seff" class="card-seff">
         <ul class="list-group">
@@ -28,8 +25,7 @@
 
 
       <% end %>
-    </div>
-  </div>
+
 </div>
 
 <div class="card-info">
@@ -60,9 +56,8 @@
 <div style="height: 70px;"></div>
 </div>
 
-</div>
-
 <div class= "container-incident-image"></div>
+
 
 </div>
 
