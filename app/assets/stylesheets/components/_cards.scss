@@ -1,5 +1,4 @@
-
-.wrapper-card{
+.wrapper-card-incident{
 background-image: radial-gradient(#0f3150 0,#002 96%);
 background-size: cover;
 padding: 40px 50px;
@@ -26,21 +25,21 @@ min-height: calc(100vh - 75px);
   text-transform: uppercase;
   color: rgb(220,220,220);
   }
-.card-incident {
+.card {
   margin-top:50px;
   height: 150px;
-  width: 300px;
+  width: 500px;
   text-shadow: 3 3px 2px rgba(0,0,0,1);
   background-color: rgba(255,255,255,.05);
   color: #999999;
   position: relative;
-  border-radius:10px;
+  border-radius: 10px;
   opacity: 0.9;
   box-shadow: 1px 2px 4px -1px rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
 
-.card-indcident:hover {
+.card:hover {
   text-decoration: none;
   background:rgba(27,56,81, 0.9);
   border-radius: 16px;
@@ -82,13 +81,6 @@ min-height: calc(100vh - 75px);
   left: 10px;
 }
 
-.card-description p {
-  font-family: $headers-font;
-  font-size: 20px;
-  text-align: left;
-  color: $luchoyellow;
-}
-
 
 .card-description h3 {
   font-family: $headers-font;
@@ -98,12 +90,11 @@ min-height: calc(100vh - 75px);
 }
 
 .card-description p {
- font-family: $body-font;
+  font-family: $body-font;
   font-size: 19px;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(220,220,220);
-  margin-top: 100px;
+  color: $luchoyellow;
 }
 
 
@@ -118,39 +109,43 @@ min-height: calc(100vh - 75px);
   opacity: 0;
 }
 
+
+#buttonsearch {
+  color: $luchoyellow;
+  font-family: $body-font;
+}
 //drop down madness for cards
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
+// .dropbtn {
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 16px;
+//     font-size: 16px;
+//     border: none;
+// }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
+// .dropdown {
+//     position: relative;
+//     display: inline-block;
+// }
+// .dropdown-content {
+//     display: none;
+//     position: absolute;
+//     background-color: #f1f1f1;
+//     min-width: 160px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     z-index: 1;
+// }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+// .dropdown-content a {
+//     color: black;
+//     padding: 12px 16px;
+//     text-decoration: none;
+//     display: block;
+// }
 
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
+// .dropdown-content a:hover {background-color: #ddd;}
+// .dropdown:hover .dropdown-content {display: block;}
+// .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 //Scrollbar for Cards
 // .scrollbar
