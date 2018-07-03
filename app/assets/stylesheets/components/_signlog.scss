@@ -40,7 +40,7 @@
 }
 .container-incident {
   background: radial-gradient(#0f3150 0,#002 66%);
-
+  max-width: 500px;
 
 }
 
@@ -67,16 +67,21 @@
 }
 .container-incident {
   background: radial-gradient(#0f3150 0,#002 66%);
-
+h2 h4{
+  font-size: 32px;
+  margin-top: 110px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
 
 }
 
 
-.nocolmargin {
-  margin: 0px;
-}
-
-h2 {
+.container-logsign h2 {
   font-size: 32px;
   margin-top: 110px;
   margin-bottom: 30px;
@@ -208,9 +213,6 @@ a {
   color: white;
 }
 
-.side_effect_incidents {
-  color: white;
-}
 
 .btn-editside:hover {
    border: 1px solid red;
@@ -225,6 +227,17 @@ a {
   border: white 2px solid;
   margin-top: 10px;
   //width: 305px;
+}
+
+
+
+
+
+#side_effect_incidents {
+  color: white;
+  padding-left:15px;
+  padding-right:15px;
+  margin-top: 15px;
 }
 
 @media(max-width: 460px) {
@@ -419,7 +432,7 @@ a {
   color: white;
 }
 
-.side_effect_incidents {
+#side_effect_incidents {
   color: white;
 }
 

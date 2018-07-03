@@ -1,66 +1,50 @@
 <div class="main-container-incident">
-<div class="container-incident">
-<h2>Edit</h2>
-
-  <div><h4>Select Side Effects</h4></div>
-
-   <div class="row">
-    <div class="col-xs-12">
-      <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
-    </div>
-  </div>
-
-<div id="side_effect_incidents">
-  <div class="row">
-    <div class="col-xs-12">
-
-<div id="seff" class="card-seff">
-        <ul class="list-group">
+  <div class="container-incident">
+    <h2>Edit</h2>
+    <div><h4>Select Side Effects</h4></div>
+    <%= render "side_effect_incidents/form", incident: @incident, side_effect_incident: @side_effect_incident %>
+    <div id="side_effect_incidents">
+      <!-- <div id="seff" class="card-seff"> -->
+    <!--     <ul class="list-group"> -->
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-
-          <li id="side_effect_incident-<%= side_effect_incident.id%>">
+          <!-- <li id="side_effect_incident-<%= side_effect_incident.id%>"> -->
             <%= render 'side_effect_incidents/show', side_effect_incident: side_effect_incident, side_effect: side_effect_incident.side_effect%>
-             <%= link_to "Delete",  parent_incident_side_effect_incident_path(current_user.parent, @incident,side_effect_incident), method: :delete, remote: true %>
-             </li>
-              </ul>
+
+         <!--  </li> -->
+      <!--   </ul> -->
+
+        <% end %>
+      <!-- </div> -->
     </div>
 
+    <div class="card-info">
+      <%= simple_form_for [@parent, @incident] do |f| %>
+      <div class="form-inputs">
 
-      <% end %>
+        <%# @allmedications.each do |medication| %>
+        <%#= f.input :medication.medication.name, as: :select, collection: medication_name, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
+        <%# end %>
+        <%= f.input :medication_name, placeholder: 'Choose the medication'   %>
+        <%= f.input :date_medication_received, placeholder: 'user@domain.com', wrapper_html: { class: 'datepicker'}  %>
+        <%= f.input :dose, placeholder: 'What was the precise dosage?' %>
+        <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident', wrapper_html: { class: 'datepicker'} %>
+        <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
+
+        <%= f.input :description, placeholder: "What's about the incident?" %>
+      </div>
+
+      <div class="card-btn-sideffects">
+        <div class="form-actions">
+          <%= f.button :submit, "Continue", id: "btn-sideffects"  %>
+        </div>
+        <% end %>
+      </div>
+      <div style= "height: 50px"></div>
     </div>
   </div>
-</div>
 
-<div class="card-info">
-  <%= simple_form_for [@parent, @incident] do |f| %>
-  <div class="form-inputs">
 
-    <%# @allmedications.each do |medication| %>
-      <%#= f.input :medication.medication.name, as: :select, collection: medication_name, prompt: 'Chooser the Medicaiton', label: false, error: 'Medicaiton is mandatory, please select one' %>
-      <%# end %>
-  <%= f.input :medication_name, placeholder: 'Choose the medication'   %>
-  <%= f.input :date_medication_received, placeholder: 'user@domain.com', wrapper_html: { class: 'datepicker'}  %>
-  <%= f.input :dose, placeholder: 'What was the precise dosage?' %>
-  <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident', wrapper_html: { class: 'datepicker'} %>
-  <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
-
- <%= f.input :description, placeholder: "What's about the incident?" %>
-</div>
-
-<div class="card-btn-sideffects">
-<div class="form-actions">
-    <%= f.button :submit, "Continue", id: "btn-sideffects"  %>
-  </div>
-<% end %>
-</div>
-<div style="height: 70px;"></div>
-  </div>
-<div style="height: 70px;"></div>
-</div>
-
-</div>
-
-<div class= "container-incident-image"></div>
+  <div class= "container-incident-image"></div>
 
 </div>
 
