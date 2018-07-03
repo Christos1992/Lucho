@@ -76,7 +76,7 @@
   margin: 0px;
 }
 
-h2 {
+.container-logsign h2 {
   font-size: 32px;
   margin-top: 110px;
   margin-bottom: 30px;
@@ -139,6 +139,22 @@ background-color: rgb(36, 66, 97);
   font-weight: 300;
 }
 
+.card-butto {
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-h4 {
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+
+h4 {
+  color: white;
+}
+}
+
 #btn {
   margin-top: 10px;
   width: 100px;
@@ -183,7 +199,7 @@ background-color: rgb(36, 66, 97);
 
 
 .card-links {
-  margin-top: 50px;
+  margin-top: 40px;
   //background-color: grey;
   color: white;
 
