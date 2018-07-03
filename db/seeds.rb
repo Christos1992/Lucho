@@ -19,7 +19,7 @@ puts "creating a child"
 chi = Child.create!(first_name: "Jonas", last_name: "Montan", gender: "boy", date_of_birth: "22/03/1983", type_of_cancer: "Leukemia", stage_of_cancer: 1, first_time_patient: true, date_treatment_begin: "11/11/2017", hospital_name: "saint george", doctor_name: "Dr.Love", school: true, biggest_dream: "go to the moon", parent_id: par.id)
 puts "creating childmedication"
 ChildMedication.create!(perscriptioned_doses: 1, medication_id: Medication.all.sample.id, child_id: chi.id)
-
+puts "making side effects"
 #External Radiation Side Effects
 SideEffect.create!(name: "Fatigue", metric: "Mild - Normal activity with effort")
 SideEffect.create!(name: "Fatigue", metric: "Modarate - In bed less than half of day")
@@ -45,9 +45,9 @@ SideEffect.create!(name: "Constipation", metric: "Mild - No bowel movement for 2
 SideEffect.create!(name: "Constipation", metric: "Moderate - No bowel movement for 3 to 4 days")
 SideEffect.create!(name: "Constipation", metric: "Severe - No bowel movement for more than 4
 days or swollen abdomen")
-SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Mild – Slightly decreased appetite")
-SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Moderate – Usually not hungry")
-SideEffect.create!(name: "Loss of Appetite (Anorexia):", metric: "Severe – Nothing looks good/unable to eat")
+SideEffect.create!(name: "Loss of Appetite (Anorexia)", metric: "Mild – Slightly decreased appetite")
+SideEffect.create!(name: "Loss of Appetite (Anorexia)", metric: "Moderate – Usually not hungry")
+SideEffect.create!(name: "Loss of Appetite (Anorexia)", metric: "Severe – Nothing looks good/unable to eat")
 SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Mild - Pain but can eat")
 SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Moderate - Pain requiring soft or liquid diet")
 SideEffect.create!(name: "Pain or difficulty with swallowing", metric: "Severe - Unable to eat at all")
@@ -56,11 +56,21 @@ SideEffect.create!(name: "Swelling (Edema) in Hands or Feet", metric: "Moderate 
 SideEffect.create!(name: "Swelling (Edema) in Hands or Feet", metric: "Severe – Swelling with pain or trouble
 breathing")
 
+puts "creating incidents for user 1 parent 1"
+
+Incident.create!(medication_name:"BACTRIM",dose:"2ml" ,period: "2 days", description: "easy to take didnt had problem swallowing it", date_medication_received: DateTime.strptime("07/07/2018 8:00", "%m/%d/%Y %H:%M"), date_of_incident:DateTime.strptime("07/05/2018 8:00", "%m/%d/%Y %H:%M"),parent_id: 1)
+Incident.create!(medication_name:"BACTRIM",dose:"2ml" ,period: "2 days", description: "easy to take didnt had problem swallowing it", date_medication_received: DateTime.strptime("07/07/2018 8:00", "%m/%d/%Y %H:%M"), date_of_incident:DateTime.strptime("07/03/2018 8:00", "%m/%d/%Y %H:%M"),parent_id: 1)
+Incident.create!(medication_name:"CARBOPLATIN",dose:"2ml" ,period: "2 days", description: "easy to take didnt had problem swallowing it", date_medication_received: DateTime.strptime("07/07/2018 8:00", "%m/%d/%Y %H:%M"), date_of_incident:DateTime.strptime("07/01/2018 8:00", "%m/%d/%Y %H:%M"),parent_id: 1)
+Incident.create!(medication_name:"CARBOPLATIN",dose:"2ml" ,period: "2 days", description: "easy to take didnt had problem swallowing it", date_medication_received: DateTime.strptime("07/07/2018 8:00", "%m/%d/%Y %H:%M"), date_of_incident:DateTime.strptime("07/01/2018 8:00", "%m/%d/%Y %H:%M"),parent_id: 1)
 
 
 
-
-
+SideEffectIncident.create!(id: 4, side_effect_id: 7, incident_id: 1,)
+SideEffectIncident.create!(id: 3, side_effect_id: 7, incident_id: 1,)
+SideEffectIncident.create!(id: 1, side_effect_id: 7, incident_id: 2,)
+SideEffectIncident.create!(id: 2, side_effect_id: 9, incident_id: 2,)
+SideEffectIncident.create!(id: 5, side_effect_id: 4, incident_id: 3,)
+SideEffectIncident.create!(id: 6, side_effect_id: 5, incident_id: 4,)
 
 
 
