@@ -1,1 +1,6 @@
+<li id="side_effect_incident-<%= side_effect_incident.id%>">
 <%= "#{side_effect_incident.side_effect.name} #{side_effect_incident.side_effect.metric} "%>
+<%= link_to parent_incident_side_effect_incident_path(current_user.parent, @incident,side_effect_incident), method: :delete, remote: true do%>
+    <i class="fa fa-trash"></i>
+<% end %>
+</li>
