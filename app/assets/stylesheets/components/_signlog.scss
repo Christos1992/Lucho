@@ -16,6 +16,10 @@
   background: radial-gradient(#0f3150 0,#002 66%);
   flex: 0 0 30%;
 
+  h2 {
+    padding-top: 30px;
+  }
+
 }
 .main-container-incident {
   margin-top: 3.5em;
@@ -41,6 +45,10 @@
 .container-incident {
   background: radial-gradient(#0f3150 0,#002 66%);
   max-width: 500px;
+
+  h4 {
+
+  }
 
 }
 
