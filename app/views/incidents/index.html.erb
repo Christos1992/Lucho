@@ -1,19 +1,19 @@
-<div class="wrapper-card">
+<div class="wrapper-card-incident">
   <div class="container-card">
-    <div class="searchbb">
-     <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
-     <%= form.text_field :query, placeholder: "Find a Medication" %>
-     <%= form.submit 'Search', id:"buttonhome" %>
-     <% end %>
-   </div>
 
    <h1>All your <strong> Medications</strong></h1>
+    <div class="searchbb">
+     <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
+     <%= form.text_field :query, placeholder: "Search for Medication" %>
+     <%= form.submit 'Search', id:"buttonsearch" %>
+     <% end %>
+   </div>
    <div class="row">
 
     <% @incidents.each do |incident| %>
     <div class="col-xs-12 col-sm-4">
 
-      <div class="card-incident">
+      <div class="card">
         <%= link_to parent_incident_path(@parent, incident), class: "linkcss" do%>
         <i class="fas fa-search-plus"></i> 
         <% end %>
