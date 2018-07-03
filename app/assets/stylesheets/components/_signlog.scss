@@ -82,6 +82,9 @@ h2 {
   h4 {
     margin-top: 30px;
     color: white;
+    margin-left: 135px;
+    font-weight: bold;
+
   }
 
 }
@@ -142,6 +145,7 @@ background-color: rgb(36, 66, 97);
   color: white;
   display: center;
   padding: 20px;
+  font-size: 25px;
   //background-color: grey;
   width: 460px;
   vertical-align: 0 auto;
@@ -259,6 +263,8 @@ a {
   padding-left:15px;
   padding-right:15px;
   margin-top: 15px;
+  margin-left: 15px;
+
 }
 
 @media(max-width: 460px) {
