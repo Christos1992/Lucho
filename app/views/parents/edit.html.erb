@@ -1,6 +1,7 @@
 <div class="container-logsign">
-<h1>Edit your profil</h1>
-<div class="card-all-info-children">
+<h2>Edit your profile</h2>
+<div class="card-all">
+  <div class="card-butto">
 <div class="card-info">
 
  <%= simple_form_for [@parent] do |f| %>
@@ -18,10 +19,13 @@
   </div>
 
 </div>
+</div>
+<div class="card-butto">
 <div class="form-actions">
     <%= f.button :submit, "Done", id: "btn"  %>
   </div>
   <% end %>
+</div>
 </div>
 <div style = "height: 50px;">
 </div>
