@@ -224,7 +224,7 @@ h4 {
   margin-bottom: -15%;
   font-weight: 10%;
   border-radius: 5px;
-  border: white 2px solid;
+  //border: white 2px solid;
 }
 
 
@@ -265,7 +265,7 @@ a {
   background-color: $luchoyellow;
   color: $luchoblue;
   border-radius: 5px;
-  border: white 2px solid;
+  //border: white 2px solid;
   margin-top: 10px;
   //width: 305px;
 }
@@ -283,10 +283,19 @@ a {
 
 }
 
-@media(max-width: 560px) {
+#side_effect_incident:hover {
+  background-color: #E8B55A;
+
+}
+
+
+
+@media(max-width: 1024px) {
 .main-container-signin {
-display: flex;
-max-width: 460px;
+  display: flex;
+  margin-top: 3.5em;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main-container-incident {
@@ -419,7 +428,7 @@ flex-direction: column;
   background-color: $luchoyellow;
   color: $luchoblue;
   border-radius: 5px;
-  border: white 2px solid;
+  //border: white 2px solid;
 
 }
 
@@ -447,7 +456,7 @@ flex-direction: column;
   margin-bottom: -35%;
   font-weight: 10%;
   border-radius: 5px;
-  border: white 2px solid;
+  //border: white 2px solid;
 }
 
 

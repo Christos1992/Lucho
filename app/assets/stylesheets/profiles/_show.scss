@@ -29,7 +29,9 @@ h1 {
 #userinput {
   font-family: $body-font;
   color: $luchoyellow;
+
   font-weight: 400;
+
 
 }
 
@@ -105,8 +107,13 @@ table, th, td {
   margin-bottom: -15%;
   font-weight: 0%;
   border-radius: 5px;
-  border: white 2px solid;
+  //border: white 2px solid;
   font-size: 18px;
+}
+
+#btn-show:hover {
+
+background-color: #EED79A;
 }
 
 #btn-editside {
