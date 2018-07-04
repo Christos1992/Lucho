@@ -11,7 +11,7 @@
     <!-- <link rel='stylesheet' href='fullcalendar.css' /> -->
 
   </head>
-  <body>
+  <body class="<%= controller.controller_path %> <%= controller.action_name %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>

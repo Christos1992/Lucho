@@ -78,7 +78,7 @@
 
 h2 {
   font-size: 32px;
-  margin-top: 110px;
+  padding-top: 110px;
   margin-bottom: 30px;
   margin-left: 20px;
   margin-right: 20px;
@@ -99,7 +99,7 @@ h2 {
 
 .container-logsign h2 {
   font-size: 32px;
-  margin-top: 110px;
+  padding-top: 110px;
   margin-bottom: 30px;
   margin-left: 20px;
   margin-right: 20px;
@@ -526,4 +526,8 @@ a {
     h3 {
       color: white;
     }
+}
+
+.parents.edit {
+  background-color: #010023;
 }
