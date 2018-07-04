@@ -1,13 +1,14 @@
 <div class="banner">
   <div class="cardlanding">
 <h1> Welcome to The Lucho App</h1>
+<h4 style="color: white;text-shadow: none;font-style: italic;">Help your kid with the fight of his life!</h4>
 <!-- <h2>Be in control, for your happy and healthy child </h2> -->
 
 
 <% if user_signed_in? %>
 
 <%= link_to parent_dashboard_path(current_user.parent) do %>
-    <button class="home">Discover</button>
+    <button class="home">Let's Start</button>
     <%end %>
     <% else %>
     <%= link_to user_session_path do%>
