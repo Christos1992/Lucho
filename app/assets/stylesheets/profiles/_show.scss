@@ -23,17 +23,22 @@ h1 {
 #info {
   font-family: $headers-font;
   color: white;
+  font-weight: bold;
 }
 
 #userinput {
   font-family: $body-font;
   color: $luchoyellow;
 
+  font-weight: 400;
+
+
 }
 
 #sideffect {
   font-family: $headers-font;
-  font-weight: 100;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 

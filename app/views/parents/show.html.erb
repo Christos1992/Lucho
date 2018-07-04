@@ -1,23 +1,23 @@
 <div class="container-profiles">
-<h1> Parent's profile </h1>
+<h1> Your profile </h1>
 <div class="card-all-profiles">
 <div class="card-info">
-<h4>First name: <%= @parent.first_name %></h4>
-<h4>Last name: <%= @parent.last_name %></h4>
-<h4>Gender: <%= @parent.gender %></h4>
-<h4>Date of birth: <%= @parent.date_of_birth %></h4>
-<h4>Working status: <%= @parent.working_status %></h4>
-<h4>Civil status: <%= @parent.civil_status %></h4>
-<h4>Hobbies: <%= @parent.hobbies %></h4>
-<h4>Share info: <%= @parent.share_info %></h4>
+<p id ="info">First name:<span id="userinput"> <%= @parent.first_name %></span></p>
+<p id ="info">Last name:<span id="userinput"> <%= @parent.last_name %></span></p>
+<p id ="info">Gender:<span id="userinput"> <%= @parent.gender %></span></p>
+<p id ="info">Date of birth:<span id="userinput"> <%= @parent.date_of_birth %></span></p>
+<p id ="info">Working status:<span id="userinput"> <%= @parent.working_status %></span></p>
+<p id ="info">Civil status:<span id="userinput"> <%= @parent.civil_status %></span></p>
+<p id ="info">Hobbies:<span id="userinput"> <%= @parent.hobbies %></span></p>
+<p id ="info">Share info:<span id="userinput"> <%= @parent.share_info %></span></p>
 </div>
 </div>
 <div class="card-links-profiles-edit">
-  <%= link_to "Edit", edit_parent_path(@parent) %> | <%= link_to "Go to Child's profile", parent_child_path(@parent, @parent.child) %>
+  <%= link_to "Edit", edit_parent_path(@parent) %> | <%= link_to "Go to your child's profile", parent_child_path(@parent, @parent.child) %>
   </div>
 
 <%= link_to parent_dashboard_path(current_user.parent) do %>
-    <button id="btn-show" class="home"><strong>Submit</strong></button>
+    <button id="btn-show" class="home"><strong>Done</strong></button>
     <%end %>
 
 

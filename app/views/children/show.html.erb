@@ -2,19 +2,20 @@
 <h1> Child's profile </h1>
 <div class="card-all-profiles">
 <div class="card-info">
-<h4>First name: <%= @child.first_name %></h4>
-<h4>Last name: <%= @child.last_name %></h4>
-<h4>Gender: <%= @child.gender %></h4>
-<h4>Date of birth: <%= @child.date_of_birth %></h4>
-<h4>Type of cancer: <%= @child.type_of_cancer %></h4>
-<h4>Stage of cancer: <%= @child.stage_of_cancer %></h4>
-<h4>First time patient: <%= @child.first_time_patient %></h4>
-<h4>Date treatment begin: <%= @child.stage_of_cancer %></h4>
-<h4>Hospital name: <%= @child.stage_of_cancer %></h4>
-<h4>Doctor name: <%= @child.stage_of_cancer %></h4>
-<h4>School: <%= @child.stage_of_cancer %></h4>
-<h4>Biggest dream: <%= @child.biggest_dream%></h4>
-<h4>Medications: <%= @child.medications %></h4>
+<h4 id ="info">First name: <span id="userinput"><%= @child.first_name %></span></h4>
+<h4 id ="info">Last name:<span id="userinput"> <%= @child.last_name %></span></h4>
+<h4 id ="info">Gender:<span id="userinput"> <%= @child.gender %></span></h4>
+<h4 id ="info">Date of birth:<span id="userinput"> <%= @child.date_of_birth %></span></h4>
+<div style="margin-bottom: 20px;"></div>
+<h4 id ="info">Type of cancer:<span id="userinput"> <%= @child.type_of_cancer %></span></h4>
+<h4 id ="info">Stage of cancer: <span id="userinput"><%= @child.stage_of_cancer %></span></h4>
+<h4 id ="info">First time patient: <span id="userinput"><%= @child.first_time_patient %></span></h4>
+<h4 id ="info">Date treatment begin: <span id="userinput"><%= @child.date_treatment_begin %></span></h4>
+<h4 id ="info">Hospital name: <span id="userinput"><%= @child.hospital_name %></span></h4>
+<h4 id ="info">Doctor name:<span id="userinput"> <%= @child.doctor_name %></span></h4>
+<h4 id ="info">School:<span id="userinput"> <%= @child.school %></span></h4>
+<h4 id ="info">Biggest dream:<span id="userinput"> <%= @child.biggest_dream%></span></h4>
+<h4 id ="info">Medications:<span id="userinput"> <%= @child.medications %></span></h4>
 </div>
 </div>
 

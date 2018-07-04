@@ -1,5 +1,4 @@
 <div class="main-container-incident">
-<<
 <div class="container-profiles">
 
 <h1>Details</h1>
@@ -12,12 +11,14 @@
       <p id ="info">Date of incicident:<span id="userinput">  <%= @incident.date_of_incident %></span></p>
       <p id ="info">Period: <span id="userinput">  <%= @incident.period %> </span></p>
 
-       <p id ="info">Side Effect: </p>
+       <p id ="info">Side Effects: </p>
+         <ul>
           <% @incident.side_effect_incidents.each do |side_effect_incident| %>
-           <p id="sideffect"><%= "#{side_effect_incident.side_effect.name}:"%>   <span
+          <li> <p id="sideffect"><%= "#{side_effect_incident.side_effect.name}:"%>   <span
             id="userinput"><%= "#{side_effect_incident.side_effect.metric}"%></span></p>
           <% end %>
-
+          </li>
+        </ul>
       <p id ="info">Description: <span id="userinput"> <%= @incident.description%> </span></p>
 
     </div>
