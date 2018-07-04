@@ -1,7 +1,10 @@
-class Incident < ApplicationRecord
+  class Incident < ApplicationRecord
   include PgSearch
   pg_search_scope :search_by_medicaiton,
     against: [ :medication_name ],
+    :associated_against => {
+       side_effects: [ :name , :metric]
+    },
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
