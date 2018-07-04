@@ -153,6 +153,7 @@ background-color: rgb(36, 66, 97);
   color: white;
   display: center;
   padding: 20px;
+  margin-bottom: 30px;
   font-size: 25px;
   //background-color: grey;
   width: 460px;
@@ -307,6 +308,7 @@ a {
 
 .container-logsign {
 text-align: left;
+width: 100%;
 
 // vertical-align: middle;
 background: radial-gradient(#0f3150 0,#002 66%);
@@ -348,7 +350,7 @@ font-weight: 300;
 
 .card-all {
   //background-color: rgb(36, 66, 97);
-  padding: 5px;
+ // padding: 5px;
   //height: 400px;
 }
 
@@ -398,8 +400,9 @@ flex-direction: column;
   color: white;
   display: center;
   padding: 20px;
+  margin-bottom: 30px;
+  width: 365px;
   //background-color: grey;
-  width: 500px;
   vertical-align: 0 auto;
   border-radius: 4px;
   font-weight: 300;

@@ -195,3 +195,56 @@ p {
   justify-content: center;
 
 }
+@media(max-width: 1024px) {
+  .banner {
+  background-image:linear-gradient(-225deg, rgba(62, 60, 59, 0.4) 29%, rgba(62, 60, 59, 0.3) 66%), url("fb-13.jpg");
+  background-size: cover;
+  height: calc(100vh - 75px);
+  display: flex;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  // position:relative;
+  // flex-direction: column;
+ }
+
+.cardlanding {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  width: 100%;
+
+
+  //margin-left: 5%;
+  //position:relative;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 2px rgba(225, 182, 104, 1);
+  font-size: 45px;
+  font-weight: 300;
+  //position: absolute;
+
+  //top: 250px;
+
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+
+}
+}
+
+

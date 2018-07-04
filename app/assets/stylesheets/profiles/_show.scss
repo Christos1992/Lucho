@@ -59,7 +59,7 @@ table, th, td {
 .card-all-profiles{
   padding: 5px;
   width: 500px;
-  border: #E8B55A 1px solid;
+  //border: #E8B55A 1px solid;
   border-radius: 5px;
 }
 
@@ -124,3 +124,146 @@ background-color: #EED79A;
 
 
 }
+
+@media all and (max-width: 1024px)
+{
+   //
+.parents.edit {
+  background-color: #010023;
+  width: auto;
+}
+
+.parents.show {
+width: auto;
+}
+
+      .container-profiles {
+//text-align: center;
+vertical-align: middle;
+background: radial-gradient(#0f3150 0,#002 66%);
+margin: 0 auto;
+//opacity: 0.8;
+min-height: calc(100vh - 75px);
+//height: 500px;
+//border-radius: 4px;
+width: auto;
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color:  #173F5E;
+//border: solid 0.1px
+color: white;
+
+h1 {
+  font-family: $headers-font;
+  margin-top: 70px;
+  color: white;
+}
+}
+#info {
+  font-family: $headers-font;
+  color: white;
+  font-weight: bold;
+}
+
+#userinput {
+  font-family: $body-font;
+  color: $luchoyellow;
+
+  font-weight: 400;
+
+
+}
+
+#sideffect {
+  font-family: $headers-font;
+  font-weight: bold;
+  font-size: 25px;
+
+
+
+table, th, td {
+
+}
+
+}
+.datepicker .d-flex {
+  display: flex;
+}
+.datepicker select {
+    margin: 5px;
+}
+
+
+
+.card-all-profiles{
+  padding: 5px;
+  width: 100%;
+  //border: #E8B55A 1px solid;
+  border-radius: 5px;
+}
+
+.card-links-profiles {
+  margin-top: 30px;
+  text-align: center;
+  display: felx;
+  vertical-align: middle;
+   a {
+    color: #E8B55A;
+  }
+  a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+.card-links-profiles-edit {
+  margin-top: 20px;
+
+  a {
+    color: #E8B55A;
+  }
+  a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+// #btn-dashboard {
+//   width: 130px;
+//   background-color: #E8B55A;
+//   color: #173F5E;
+//   font-weight: 0%;
+//   border-radius: 5px;
+//   border: white 2px solid;
+// }
+
+ #btn-show {
+  width: auto;
+   background-color: #E8B55A;
+  color: #173F5E;
+  margin-top: 20px;
+  margin-bottom: -15%;
+  font-weight: 0%;
+  border-radius: 5px;
+  //border: white 2px solid;
+  font-size: 18px;
+}
+
+#btn-show:hover {
+
+background-color: #EED79A;
+}
+
+#btn-editside {
+  color: #173F5E;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
+}
+      }
+
+
