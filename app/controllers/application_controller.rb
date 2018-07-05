@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     redirect_to new_parent_path if !current_user.nil? && current_user.parent.nil?
 
   end
+
+  def default_url_options
+  { host: ENV["HOST"] || "localhost:3000" }
+  end
 end

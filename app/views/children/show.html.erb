@@ -1,5 +1,5 @@
 <div class="container-profiles">
-<h1> Child's profile </h1>
+<h1> Your Kid's profile </h1>
 <div class="card-all-profiles">
 <div class="card-info">
 <h4 id ="info">First name: <span id="userinput"><%= @child.first_name %></span></h4>
@@ -20,7 +20,7 @@
 </div>
 
 <div class="card-links-profiles-edit">
-  <%= link_to "Edit", edit_parent_child_path(current_user.parent, @child) %> | <%= link_to "Go to parent's profile", parent_path(current_user.parent, @child) %>
+  <%= link_to "Edit", edit_parent_child_path(current_user.parent, @child) %> | <%= link_to "Go to your profile", parent_path(current_user.parent, @child) %>
   </div>
 
 <%= link_to parent_dashboard_path(current_user.parent, @child) do %>
