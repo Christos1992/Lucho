@@ -17,8 +17,8 @@
    <%= f.input :date_medication_received, placeholder: 'user@domain.com', wrapper_html: { class: 'datepicker'}  %>
   <%= f.input :dose, placeholder: 'What was the precise dosage?' %>
   <%= f.input :date_of_incident, start_year: Time.now.year, end_year: Time.now.year,  hint: 'Please enter the date of the incident', wrapper_html: { class: 'datepicker'} %>
-  <%= f.input :period, placeholder: 'Hours - Days - Weeks - Months' %>
-  <%= f.input :description, placeholder: "What's about the incident?" %>
+  <%= f.input :period, placeholder: 'For how long did the Side Effects last?' %>
+  <%= f.input :description, placeholder: "What happened exactly?" %>
 </div>
 <div class="card-butto">
 <div class="form-actions">

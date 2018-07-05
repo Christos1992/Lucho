@@ -13,7 +13,7 @@
 </div>
 </div>
 <div class="card-links-profiles-edit">
-  <%= link_to "Edit", edit_parent_path(@parent) %> | <%= link_to "Go to your child's profile", parent_child_path(@parent, @parent.child) %>
+  <%= link_to "Edit", edit_parent_path(@parent) %> | <%= link_to "Go to your kids's profile", parent_child_path(@parent, @parent.child) %>
   </div>
 
 <%= link_to parent_dashboard_path(current_user.parent) do %>

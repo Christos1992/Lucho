@@ -5,7 +5,7 @@
     <div class="searchbb">
      <%= form_with url: parent_incidents_path(@parent), method: :get, local: true do |form| %>
      <%= form.text_field :query, placeholder: "Search for Medication" %>
-     <%= form.submit 'Search', id:"buttonsearch" %>
+     <%= form.submit 'Search', id: "btn-sideffects" %>
      <% end %>
    </div>
    <div class="row">
