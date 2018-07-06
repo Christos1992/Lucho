@@ -37,7 +37,7 @@ $(function() {
 
   },
   {
-     title: 'Fake link for a Facebook event',
+     title: 'Lucho Parent Gathering Event',
     start: '2018-07-26',
     url: 'https://www.facebook.com/LuchoWithYou/',
      description: "Meeting with Lucho community"
