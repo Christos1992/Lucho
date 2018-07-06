@@ -30,15 +30,15 @@ $(function() {
         },
    events: [
   {
-    title: 'Fake link for a Medication took',
-    start: '2018-06-06',
+    title: 'Take 3ml of Bactrim',
+    start: '2018-07-016',
     url: 'http://localhost:3000/parents/1/incidents/2',
-     description: "Fatigue"
+     description: "BACTRIM"
 
   },
   {
-     title: 'Fake link for a Facebook event',
-    start: '2018-06-11',
+     title: 'Lucho Parent Gathering Event',
+    start: '2018-07-26',
     url: 'https://www.facebook.com/LuchoWithYou/',
      description: "Meeting with Lucho community"
 
