@@ -7,10 +7,10 @@ class IncidentsController < ApplicationController
     if params[:query].present?
        @incidents = @parent.incidents.search_by_medicaiton(params[:query])
        if @incidents.empty?
-        @incidents = Incident.all
+        @incidents = Incident.where(parent_id: @parent.id)
       end
     else
-      @incidents = Incident.all
+      @incidents = Incident.where(parent_id: @parent.id)
     end
   end
 
@@ -36,7 +36,7 @@ class IncidentsController < ApplicationController
   def create
     @incident = Incident.new(incident_params)
     @incident.parent = Parent.find(current_user.parent.id)
-    if @incident.save 
+    if @incident.save
       redirect_to edit_parent_incident_path(current_user.parent,@incident)
     else
       render 'new'
@@ -119,7 +119,7 @@ class IncidentsController < ApplicationController
 
   private
   def incident_params
-   params.require(:incident).permit(:medication_name, :dose, :period,:side_effect, :description, :metric, :date_medication_recreived, :date_of_incident)
+   params.require(:incident).permit(:medication_name, :dose, :period,:side_effect, :description, :metric, :date_medication_received, :date_of_incident)
   end
 
   def find_id
